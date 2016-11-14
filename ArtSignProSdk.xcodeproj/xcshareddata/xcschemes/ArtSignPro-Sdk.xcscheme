@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EDD5AB5F1DD973600035696E"
+            BuildableName = "ArtSignProSdk.framework"
+            BlueprintName = "ArtSignProSdk"
+            ReferencedContainer = "container:ArtSignProSdk.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

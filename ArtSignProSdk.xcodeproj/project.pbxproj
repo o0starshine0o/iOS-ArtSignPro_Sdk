@@ -6,9 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */; };
+		EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6D1DD991060035696E /* GenerateProblem.swift */; };
+		EDD5AB761DD9939B0035696E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB751DD9939B0035696E /* Tests.swift */; };
+		EDD5AB781DD9939B0035696E /* ArtSignProSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD5AB601DD973610035696E /* ArtSignProSdk.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDD5AB791DD9939B0035696E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDD5AB571DD973600035696E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD5AB5F1DD973600035696E;
+			remoteInfo = ArtSignProSdk;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticProblem.swift; path = Source/ArithmeticProblem.swift; sourceTree = SOURCE_ROOT; };
+		EDD5AB6D1DD991060035696E /* GenerateProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateProblem.swift; path = Source/GenerateProblem.swift; sourceTree = SOURCE_ROOT; };
+		EDD5AB731DD9939B0035696E /* ArithmeticTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD5AB751DD9939B0035696E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		EDD5AB771DD9939B0035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -19,6 +41,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDD5AB701DD9939B0035696E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD5AB781DD9939B0035696E /* ArtSignProSdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -26,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD5AB621DD973610035696E /* Source */,
+				EDD5AB741DD9939B0035696E /* Tests */,
 				EDD5AB611DD973610035696E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -34,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD5AB601DD973610035696E /* ArtSignProSdk.framework */,
+				EDD5AB731DD9939B0035696E /* ArithmeticTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -42,9 +74,20 @@
 			isa = PBXGroup;
 			children = (
 				EDD5AB641DD973610035696E /* Info.plist */,
+				EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */,
+				EDD5AB6D1DD991060035696E /* GenerateProblem.swift */,
 			);
 			name = Source;
 			path = "ArtSignPro-Sdk";
+			sourceTree = "<group>";
+		};
+		EDD5AB741DD9939B0035696E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EDD5AB751DD9939B0035696E /* Tests.swift */,
+				EDD5AB771DD9939B0035696E /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,16 +121,41 @@
 			productReference = EDD5AB601DD973610035696E /* ArtSignProSdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EDD5AB721DD9939B0035696E /* ArithmeticTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD5AB7B1DD9939B0035696E /* Build configuration list for PBXNativeTarget "ArithmeticTest" */;
+			buildPhases = (
+				EDD5AB6F1DD9939B0035696E /* Sources */,
+				EDD5AB701DD9939B0035696E /* Frameworks */,
+				EDD5AB711DD9939B0035696E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDD5AB7A1DD9939B0035696E /* PBXTargetDependency */,
+			);
+			name = ArithmeticTest;
+			productName = Tests;
+			productReference = EDD5AB731DD9939B0035696E /* ArithmeticTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EDD5AB571DD973600035696E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = qicode;
 				TargetAttributes = {
 					EDD5AB5F1DD973600035696E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = A3R6UY8WB2;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					EDD5AB721DD9939B0035696E = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = A3R6UY8WB2;
 						ProvisioningStyle = Automatic;
@@ -107,12 +175,20 @@
 			projectRoot = "";
 			targets = (
 				EDD5AB5F1DD973600035696E /* ArtSignProSdk */,
+				EDD5AB721DD9939B0035696E /* ArithmeticTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EDD5AB5E1DD973600035696E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD5AB711DD9939B0035696E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,10 +202,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */,
+				EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD5AB6F1DD9939B0035696E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD5AB761DD9939B0035696E /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDD5AB7A1DD9939B0035696E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDD5AB5F1DD973600035696E /* ArtSignProSdk */;
+			targetProxy = EDD5AB791DD9939B0035696E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EDD5AB661DD973610035696E /* Debug */ = {
@@ -234,6 +328,29 @@
 		EDD5AB691DD973610035696E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A3R6UY8WB2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDD5AB6A1DD973610035696E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
@@ -249,24 +366,28 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		EDD5AB6A1DD973610035696E /* Release */ = {
+		EDD5AB7C1DD9939B0035696E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDD5AB7D1DD9939B0035696E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = A3R6UY8WB2;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -291,6 +412,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EDD5AB7B1DD9939B0035696E /* Build configuration list for PBXNativeTarget "ArithmeticTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD5AB7C1DD9939B0035696E /* Debug */,
+				EDD5AB7D1DD9939B0035696E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
