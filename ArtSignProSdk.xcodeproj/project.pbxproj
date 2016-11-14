@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99993EB78502BE22ADA61276 /* Pods_ArithmeticTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */; };
 		EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */; };
 		EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6D1DD991060035696E /* GenerateProblem.swift */; };
 		EDD5AB761DD9939B0035696E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB751DD9939B0035696E /* Tests.swift */; };
@@ -24,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FB2C45EE556BC086C96DB28 /* Pods-ArithmeticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArithmeticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest.release.xcconfig"; sourceTree = "<group>"; };
+		64B7628725C306C6D5765539 /* Pods-ArithmeticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArithmeticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticProblem.swift; path = Source/ArithmeticProblem.swift; sourceTree = SOURCE_ROOT; };
@@ -31,6 +34,7 @@
 		EDD5AB731DD9939B0035696E /* ArithmeticTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB751DD9939B0035696E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		EDD5AB771DD9939B0035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArithmeticTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,18 +50,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD5AB781DD9939B0035696E /* ArtSignProSdk.framework in Frameworks */,
+				99993EB78502BE22ADA61276 /* Pods_ArithmeticTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DE69C3A8A51F52B5C6F311A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E45AE01BBB231919E160F753 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64B7628725C306C6D5765539 /* Pods-ArithmeticTest.debug.xcconfig */,
+				0FB2C45EE556BC086C96DB28 /* Pods-ArithmeticTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EDD5AB561DD973600035696E = {
 			isa = PBXGroup;
 			children = (
 				EDD5AB621DD973610035696E /* Source */,
 				EDD5AB741DD9939B0035696E /* Tests */,
 				EDD5AB611DD973610035696E /* Products */,
+				E45AE01BBB231919E160F753 /* Pods */,
+				3DE69C3A8A51F52B5C6F311A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD5AB7B1DD9939B0035696E /* Build configuration list for PBXNativeTarget "ArithmeticTest" */;
 			buildPhases = (
+				80141857D4BFFF931AA69B63 /* [CP] Check Pods Manifest.lock */,
 				EDD5AB6F1DD9939B0035696E /* Sources */,
 				EDD5AB701DD9939B0035696E /* Frameworks */,
 				EDD5AB711DD9939B0035696E /* Resources */,
+				C8D7F7EB932D87A4D9FD82E8 /* [CP] Embed Pods Frameworks */,
+				AD754024F510AB3DD237F1CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80141857D4BFFF931AA69B63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD754024F510AB3DD237F1CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D7F7EB932D87A4D9FD82E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDD5AB5B1DD973600035696E /* Sources */ = {
@@ -370,6 +445,7 @@
 		};
 		EDD5AB7C1DD9939B0035696E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64B7628725C306C6D5765539 /* Pods-ArithmeticTest.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -382,6 +458,7 @@
 		};
 		EDD5AB7D1DD9939B0035696E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB2C45EE556BC086C96DB28 /* Pods-ArithmeticTest.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -420,6 +497,7 @@
 				EDD5AB7D1DD9939B0035696E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

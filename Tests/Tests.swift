@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Nimble
+@testable import ArtSignProSdk
 
 class Tests: XCTestCase {
     
@@ -20,18 +22,31 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssert(true)
+    func testNextAddition() {
+        let additionProblem = nextAdditon()
+        expect(additionProblem.leftOperand).to(beLessThanOrEqualTo(20))
+        expect(additionProblem.leftOperand).to(beGreaterThan(0))
+        expect(additionProblem.rightOperand).to(beLessThanOrEqualTo(20))
+        expect(additionProblem.rightOperand).to(beGreaterThan(0))
+        expect(additionProblem.op).to(equal(Operator.Add))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-            XCTAssert(true)
-        }
+    func testNextSubtraction() {
+        let subtractionProblem = nextSubtraction()
+        expect(subtractionProblem.leftOperand).to(beLessThanOrEqualTo(20))
+        expect(subtractionProblem.leftOperand).to(beGreaterThan(0))
+        expect(subtractionProblem.rightOperand).to(beLessThanOrEqualTo(20))
+        expect(subtractionProblem.rightOperand).to(beGreaterThan(0))
+        expect(subtractionProblem.op).to(equal(Operator.Minus))
+    }
+    
+    func testNextMultiplction() {
+        let multiplicationProblem = nextMultiplication()
+        expect(multiplicationProblem.leftOperand).to(beLessThanOrEqualTo(20))
+        expect(multiplicationProblem.leftOperand).to(beGreaterThan(0))
+        expect(multiplicationProblem.rightOperand).to(beLessThanOrEqualTo(20))
+        expect(multiplicationProblem.rightOperand).to(beGreaterThan(0))
+        expect(multiplicationProblem.op).to(equal(Operator.Multiply))
     }
     
 }
