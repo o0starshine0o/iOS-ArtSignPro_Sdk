@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		99993EB78502BE22ADA61276 /* Pods_ArithmeticTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */; };
+		ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */; };
+		ED62F3281DDAC44E00AB8BA5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F3271DDAC44E00AB8BA5 /* File.swift */; };
+		ED62F32B1DDB054500AB8BA5 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
+		ED62F32D1DDB078400AB8BA5 /* ExpertSignListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */; };
+		ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */; };
 		EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */; };
 		EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6D1DD991060035696E /* GenerateProblem.swift */; };
 		EDD5AB761DD9939B0035696E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB751DD9939B0035696E /* Tests.swift */; };
@@ -27,6 +32,12 @@
 /* Begin PBXFileReference section */
 		0FB2C45EE556BC086C96DB28 /* Pods-ArithmeticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArithmeticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest.release.xcconfig"; sourceTree = "<group>"; };
 		64B7628725C306C6D5765539 /* Pods-ArithmeticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArithmeticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArithmeticTest/Pods-ArithmeticTest.debug.xcconfig"; sourceTree = "<group>"; };
+		ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArtSignProSdk.podspec; sourceTree = "<group>"; };
+		ED62F3271DDAC44E00AB8BA5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Source/File.swift; sourceTree = SOURCE_ROOT; };
+		ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListViewController.swift; sourceTree = "<group>"; };
+		ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListUserCell.swift; sourceTree = "<group>"; };
+		ED62F3331DDB212200AB8BA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.storyboard"; sourceTree = "<group>"; };
+		ED62F3351DDB21E100AB8BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArtSignPro.storyboard; sourceTree = "<group>"; };
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticProblem.swift; path = Source/ArithmeticProblem.swift; sourceTree = SOURCE_ROOT; };
@@ -74,9 +85,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED62F3261DDAC1F100AB8BA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED62F3291DDB052B00AB8BA5 /* ExpertSign */ = {
+			isa = PBXGroup;
+			children = (
+				ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */,
+				ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */,
+			);
+			name = ExpertSign;
+			path = Source/ExpertSign;
+			sourceTree = SOURCE_ROOT;
+		};
 		EDD5AB561DD973600035696E = {
 			isa = PBXGroup;
 			children = (
+				ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */,
+				ED62F3261DDAC1F100AB8BA5 /* Resources */,
 				EDD5AB621DD973610035696E /* Source */,
 				EDD5AB741DD9939B0035696E /* Tests */,
 				EDD5AB611DD973610035696E /* Products */,
@@ -97,9 +128,11 @@
 		EDD5AB621DD973610035696E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ED62F3291DDB052B00AB8BA5 /* ExpertSign */,
 				EDD5AB641DD973610035696E /* Info.plist */,
 				EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */,
 				EDD5AB6D1DD991060035696E /* GenerateProblem.swift */,
+				ED62F3271DDAC44E00AB8BA5 /* File.swift */,
 			);
 			name = Source;
 			path = "ArtSignPro-Sdk";
@@ -195,6 +228,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
+				Base,
 			);
 			mainGroup = EDD5AB561DD973600035696E;
 			productRefGroup = EDD5AB611DD973610035696E /* Products */;
@@ -212,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */,
+				ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */,
+				ED62F32B1DDB054500AB8BA5 /* ExpertSignListViewController.swift in Sources */,
+				ED62F32D1DDB078400AB8BA5 /* ExpertSignListUserCell.swift in Sources */,
+				ED62F3281DDAC44E00AB8BA5 /* File.swift in Sources */,
 				EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,11 +340,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED62F3331DDB212200AB8BA5 /* zh-Hans */,
+				ED62F3351DDB21E100AB8BA5 /* Base */,
+			);
+			name = ArtSignPro.storyboard;
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		EDD5AB661DD973610035696E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -319,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -358,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -372,6 +428,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -447,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64B7628725C306C6D5765539 /* Pods-ArithmeticTest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -460,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FB2C45EE556BC086C96DB28 /* Pods-ArithmeticTest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

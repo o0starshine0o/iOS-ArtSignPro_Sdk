@@ -22,31 +22,31 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testNextAddition() {
-        let additionProblem = nextAdditon()
-        expect(additionProblem.leftOperand).to(beLessThanOrEqualTo(20))
-        expect(additionProblem.leftOperand).to(beGreaterThan(0))
-        expect(additionProblem.rightOperand).to(beLessThanOrEqualTo(20))
-        expect(additionProblem.rightOperand).to(beGreaterThan(0))
-        expect(additionProblem.op).to(equal(Operator.Add))
-    }
-    
-    func testNextSubtraction() {
-        let subtractionProblem = nextSubtraction()
-        expect(subtractionProblem.leftOperand).to(beLessThanOrEqualTo(20))
-        expect(subtractionProblem.leftOperand).to(beGreaterThan(0))
-        expect(subtractionProblem.rightOperand).to(beLessThanOrEqualTo(20))
-        expect(subtractionProblem.rightOperand).to(beGreaterThan(0))
-        expect(subtractionProblem.op).to(equal(Operator.Minus))
-    }
-    
-    func testNextMultiplction() {
-        let multiplicationProblem = nextMultiplication()
-        expect(multiplicationProblem.leftOperand).to(beLessThanOrEqualTo(20))
-        expect(multiplicationProblem.leftOperand).to(beGreaterThan(0))
-        expect(multiplicationProblem.rightOperand).to(beLessThanOrEqualTo(20))
-        expect(multiplicationProblem.rightOperand).to(beGreaterThan(0))
-        expect(multiplicationProblem.op).to(equal(Operator.Multiply))
-    }
+//    func testNextAddition() {
+//        let additionProblem = nextAdditon()
+//        expect(additionProblem.leftOperand).to(beLessThanOrEqualTo(20))
+//        expect(additionProblem.leftOperand).to(beGreaterThan(0))
+//        expect(additionProblem.rightOperand).to(beLessThanOrEqualTo(20))
+//        expect(additionProblem.rightOperand).to(beGreaterThan(0))
+//        expect(additionProblem.op).to(equal(Operator.Add))
+//    }
+//    
+//    func testNextSubtraction() {
+//        let subtractionProblem = nextSubtraction()
+//        expect(subtractionProblem.leftOperand).to(beLessThanOrEqualTo(20))
+//        expect(subtractionProblem.leftOperand).to(beGreaterThan(0))
+//        expect(subtractionProblem.rightOperand).to(beLessThanOrEqualTo(20))
+//        expect(subtractionProblem.rightOperand).to(beGreaterThan(0))
+//        expect(subtractionProblem.op).to(equal(Operator.Minus))
+//    }
+//    
+//    func testNextMultiplction() {
+//        let multiplicationProblem = nextMultiplication()
+//        expect(multiplicationProblem.leftOperand).to(beLessThanOrEqualTo(20))
+//        expect(multiplicationProblem.leftOperand).to(beGreaterThan(0))
+//        expect(multiplicationProblem.rightOperand).to(beLessThanOrEqualTo(20))
+//        expect(multiplicationProblem.rightOperand).to(beGreaterThan(0))
+//        expect(multiplicationProblem.op).to(equal(Operator.Multiply))
+//    }
     
 }
