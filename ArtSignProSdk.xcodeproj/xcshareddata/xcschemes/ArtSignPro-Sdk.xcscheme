@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDD5AB721DD9939B0035696E"
-               BuildableName = "ArithmeticTest.xctest"
-               BlueprintName = "ArithmeticTest"
+               BlueprintIdentifier = "ED7E32931DDC054A006780B7"
+               BuildableName = "ArtSignProSdkTests.xctest"
+               BlueprintName = "ArtSignProSdkTests"
                ReferencedContainer = "container:ArtSignProSdk.xcodeproj">
             </BuildableReference>
          </TestableReference>

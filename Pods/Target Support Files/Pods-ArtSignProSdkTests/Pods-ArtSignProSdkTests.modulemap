@@ -1,0 +1,6 @@
+framework module Pods_ArtSignProSdkTests {
+  umbrella header "Pods-ArtSignProSdkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

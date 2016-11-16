@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
-class ExpertSignListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,17 +32,62 @@ class ExpertSignListViewController: UIViewController, UITableViewDataSource, UIT
     }
     */
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    @available(iOS 6.0, *)
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 1
     }
     
     
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! ExpertSignListUserCell
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    @available(iOS 6.0, *)
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCell", for: indexPath) as! ExpertSignListUserCell
         return cell
+        
+    }
+    
+    // 下载用户的专家签数据
+    func loadData(){
+        // 获取支付方式
+        let payMethodParams = NetUtils.getBaseParams()
+        Alamofire.request(PayMethodUrl, method: .post, parameters: payMethodParams).responseJSON(completionHandler: payMethodResponse)
+        // 获取签名数据
+        var params = NetUtils.getBaseParams()
+        params["video"] = String(WithVideo)
+        Alamofire.request(SignListUrl, method: .post, parameters: params).responseJSON(completionHandler:expertSignListResponse)
+//        indicatorView.startAnimating()
+    }
+    
+    // 获取支付方式回调
+    func payMethodResponse(response: DataResponse<Any>) -> Void {
+//        switch response.result {
+//        case .success(let value):
+//            payMethod = PayMethodResponse.init(object: value as AnyObject)
+//            if payMethod?.status?.code == Success {
+//                payMethodResult = payMethod?.result![0]
+//                self.listView.reloadData()
+//            }else{
+//                self.listView.makeToast(payMethod?.status?.descriptionValue)
+//            }
+//        case .failure(let error):
+//            print(error)
+//        }
+    }
+    
+    // 获取专家签数据列表回调
+    func expertSignListResponse(response: DataResponse<Any>) -> Void {
+        switch response.result {
+        case .success(let value):
+            let _ = ExpertSignListResponse.init(object: value as AnyObject)
+//            if expertSignListResponse?.status?.code == Success {
+//                self.listView.reloadData()
+//            }else{
+//                self.listView.makeToast(expertSignListResponse?.status?.descriptionValue)
+//            }
+        case .failure(let error):
+            print(error)
+        }
+//        indicatorView.stopAnimating()
     }
 
 }
