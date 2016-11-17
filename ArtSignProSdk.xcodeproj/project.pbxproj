@@ -11,14 +11,11 @@
 		473EB5EFD696A4489A75B2FD /* Pods_ArtSignProSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1617C89FE481F67F9E251C8 /* Pods_ArtSignProSdk.framework */; };
 		ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */; };
 		ED62F3281DDAC44E00AB8BA5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F3271DDAC44E00AB8BA5 /* File.swift */; };
-		ED62F32B1DDB054500AB8BA5 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
-		ED62F32D1DDB078400AB8BA5 /* ExpertSignListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */; };
 		ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */; };
 		ED7E328F1DDC00BC006780B7 /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E328E1DDC00BC006780B7 /* NetUtils.swift */; };
 		ED7E32971DDC054A006780B7 /* ArtSignProSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32961DDC054A006780B7 /* ArtSignProSdkTests.swift */; };
 		ED7E32991DDC054A006780B7 /* ArtSignProSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD5AB601DD973610035696E /* ArtSignProSdk.framework */; };
 		ED7E32A01DDC05FA006780B7 /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E329F1DDC05FA006780B7 /* DataUtils.swift */; };
-		ED7E32A21DDC0691006780B7 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32A11DDC0691006780B7 /* StringUtils.swift */; };
 		ED7E32AB1DDC0A8D006780B7 /* PayMethodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32A81DDC0A8D006780B7 /* PayMethodResponse.swift */; };
 		ED7E32AC1DDC0A8D006780B7 /* PayMethodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32A91DDC0A8D006780B7 /* PayMethodResult.swift */; };
 		ED7E32AD1DDC0A8D006780B7 /* PayMethodStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32AA1DDC0A8D006780B7 /* PayMethodStatus.swift */; };
@@ -27,6 +24,8 @@
 		ED7E32B61DDC0B66006780B7 /* ExpertSignListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */; };
 		ED7E32B71DDC0B66006780B7 /* ExpertSignListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B21DDC0B66006780B7 /* ExpertSignListStatus.swift */; };
 		ED7E32B81DDC0B66006780B7 /* ExpertSignListUserSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */; };
+		EDD06D4A1DDD62CD007AC1E8 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
+		EDD06D4B1DDD62CD007AC1E8 /* ExpertSignListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */; };
 		EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */; };
 		EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6D1DD991060035696E /* GenerateProblem.swift */; };
 /* End PBXBuildFile section */
@@ -54,15 +53,12 @@
 		ED62F3271DDAC44E00AB8BA5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Source/File.swift; sourceTree = SOURCE_ROOT; };
 		ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListViewController.swift; sourceTree = "<group>"; };
 		ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListUserCell.swift; sourceTree = "<group>"; };
-		ED62F3331DDB212200AB8BA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.storyboard"; sourceTree = "<group>"; };
 		ED62F3351DDB21E100AB8BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArtSignPro.storyboard; sourceTree = "<group>"; };
 		ED7E328E1DDC00BC006780B7 /* NetUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetUtils.swift; sourceTree = "<group>"; };
 		ED7E32941DDC054A006780B7 /* ArtSignProSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtSignProSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7E32961DDC054A006780B7 /* ArtSignProSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtSignProSdkTests.swift; sourceTree = "<group>"; };
 		ED7E32981DDC054A006780B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED7E329F1DDC05FA006780B7 /* DataUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
-		ED7E32A11DDC0691006780B7 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
-		ED7E32A51DDC07D9006780B7 /* ArtSignProSdk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtSignProSdk-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED7E32A81DDC0A8D006780B7 /* PayMethodResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayMethodResponse.swift; sourceTree = "<group>"; };
 		ED7E32A91DDC0A8D006780B7 /* PayMethodResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayMethodResult.swift; sourceTree = "<group>"; };
 		ED7E32AA1DDC0A8D006780B7 /* PayMethodStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayMethodStatus.swift; sourceTree = "<group>"; };
@@ -71,6 +67,7 @@
 		ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListResult.swift; sourceTree = "<group>"; };
 		ED7E32B21DDC0B66006780B7 /* ExpertSignListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListStatus.swift; sourceTree = "<group>"; };
 		ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListUserSigns.swift; sourceTree = "<group>"; };
+		EDD06D491DDD53FF007AC1E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.strings"; sourceTree = "<group>"; };
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticProblem.swift; path = Source/ArithmeticProblem.swift; sourceTree = SOURCE_ROOT; };
@@ -145,7 +142,6 @@
 			children = (
 				ED7E328E1DDC00BC006780B7 /* NetUtils.swift */,
 				ED7E329F1DDC05FA006780B7 /* DataUtils.swift */,
-				ED7E32A11DDC0691006780B7 /* StringUtils.swift */,
 			);
 			name = Utils;
 			path = Source/Utils;
@@ -159,15 +155,6 @@
 			);
 			path = ArtSignProSdkTests;
 			sourceTree = "<group>";
-		};
-		ED7E32A31DDC0736006780B7 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				ED7E32A51DDC07D9006780B7 /* ArtSignProSdk-Bridging-Header.h */,
-			);
-			name = Support;
-			path = Source/Support;
-			sourceTree = SOURCE_ROOT;
 		};
 		ED7E32A61DDC0A54006780B7 /* Model */ = {
 			isa = PBXGroup;
@@ -201,6 +188,14 @@
 			path = ExpertSignList;
 			sourceTree = "<group>";
 		};
+		ED7E32BC1DDC3847006780B7 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Headers;
+			path = Source/Headers;
+			sourceTree = SOURCE_ROOT;
+		};
 		EDD5AB561DD973600035696E = {
 			isa = PBXGroup;
 			children = (
@@ -226,8 +221,8 @@
 		EDD5AB621DD973610035696E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ED7E32BC1DDC3847006780B7 /* Headers */,
 				ED7E32A61DDC0A54006780B7 /* Model */,
-				ED7E32A31DDC0736006780B7 /* Support */,
 				ED7E328D1DDC00A5006780B7 /* Utils */,
 				ED62F3291DDB052B00AB8BA5 /* ExpertSign */,
 				EDD5AB641DD973610035696E /* Info.plist */,
@@ -446,19 +441,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD06D4A1DDD62CD007AC1E8 /* ExpertSignListViewController.swift in Sources */,
+				EDD06D4B1DDD62CD007AC1E8 /* ExpertSignListUserCell.swift in Sources */,
 				ED7E32B81DDC0B66006780B7 /* ExpertSignListUserSigns.swift in Sources */,
 				EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */,
 				ED7E328F1DDC00BC006780B7 /* NetUtils.swift in Sources */,
-				ED62F32B1DDB054500AB8BA5 /* ExpertSignListViewController.swift in Sources */,
 				ED7E32AD1DDC0A8D006780B7 /* PayMethodStatus.swift in Sources */,
 				ED7E32B71DDC0B66006780B7 /* ExpertSignListStatus.swift in Sources */,
 				ED7E32A01DDC05FA006780B7 /* DataUtils.swift in Sources */,
 				ED7E32AB1DDC0A8D006780B7 /* PayMethodResponse.swift in Sources */,
 				ED7E32B51DDC0B66006780B7 /* ExpertSignListResponse.swift in Sources */,
-				ED7E32A21DDC0691006780B7 /* StringUtils.swift in Sources */,
 				ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */,
 				ED7E32AC1DDC0A8D006780B7 /* PayMethodResult.swift in Sources */,
-				ED62F32D1DDB078400AB8BA5 /* ExpertSignListUserCell.swift in Sources */,
 				ED62F3281DDAC44E00AB8BA5 /* File.swift in Sources */,
 				EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */,
 				ED7E32B61DDC0B66006780B7 /* ExpertSignListResult.swift in Sources */,
@@ -479,8 +473,8 @@
 		ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED62F3331DDB212200AB8BA5 /* zh-Hans */,
 				ED62F3351DDB21E100AB8BA5 /* Base */,
+				EDD06D491DDD53FF007AC1E8 /* zh-Hans */,
 			);
 			name = ArtSignPro.storyboard;
 			path = Resources;
@@ -493,12 +487,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B870707655320090B9AF2FA7 /* Pods-ArtSignProSdkTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = ArtSignProSdkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.ArtSignProSdkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Support/ArtSignProSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -507,12 +502,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1789A5B852EADCFA27B5858D /* Pods-ArtSignProSdkTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = A3R6UY8WB2;
 				INFOPLIST_FILE = ArtSignProSdkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.ArtSignProSdkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Support/ArtSignProSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -624,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CB4361B0A857795FE9F03D5 /* Pods-ArtSignProSdk.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -638,7 +635,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Support/ArtSignProSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -648,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3ABE4B8DB187B8BE821F0C2C /* Pods-ArtSignProSdk.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -662,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Support/ArtSignProSdk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

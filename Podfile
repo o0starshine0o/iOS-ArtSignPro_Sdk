@@ -8,13 +8,14 @@ target "ArtSignProSdk" do
     pod 'Alamofire'
     # 加载网络图片
     pod 'Kingfisher'
-    # ping++ 支付
-    pod 'Pingpp/Alipay'
-    pod 'Pingpp/Wx'
     # 扩展类
     pod 'EZSwiftExtensions'
     # json支持
     pod 'SwiftyJSON'
+    # sha md5
+    pod 'CryptoSwift'
+    # ping++
+    pod ''
 end
 
 target "ArtSignProSdkTests" do

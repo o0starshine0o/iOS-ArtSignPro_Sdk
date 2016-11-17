@@ -1,32 +1,27 @@
 PODS:
   - Alamofire (4.0.1)
+  - CryptoSwift (0.6.6)
   - EZSwiftExtensions (1.7)
   - Kingfisher (3.2.1)
   - Nimble (5.1.1)
-  - Pingpp/Alipay (2.2.9):
-    - Pingpp/Core
-  - Pingpp/Core (2.2.9)
-  - Pingpp/Wx (2.2.9):
-    - Pingpp/Core
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - CryptoSwift
   - EZSwiftExtensions
   - Kingfisher
   - Nimble
-  - Pingpp/Alipay
-  - Pingpp/Wx
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CryptoSwift: 88592381b73f36e192124539390a7c9bacda76af
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Pingpp: e069eec830970aa41640a6eeceb86ac6917e98b4
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 50383c774a44557a0c5888085de758c3f95bd80b
+PODFILE CHECKSUM: d36c4bc1536341192a4a4a487ef4f13cac492123
 
 COCOAPODS: 1.2.0.beta.1

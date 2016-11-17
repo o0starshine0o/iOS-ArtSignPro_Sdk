@@ -8,6 +8,7 @@
 
 import UIKit
 import EZSwiftExtensions
+import CryptoSwift
 
 let Token = "Ym"
 
@@ -58,7 +59,7 @@ class NetUtils{
         let time  =  String(Int64(Date().timeIntervalSince1970 * 1000))
         let user = DataUtils.getUserInfo()
         let password = user.id + Token + time
-        let signature = password.md5
+        let signature = password.md5()
         // 生成参数
         var params = Dictionary<String, String>()
         params["platform"] = "iOS"
@@ -67,7 +68,7 @@ class NetUtils{
         params["phone_version"] = iosVersion
         params["timestamp"] = time
         params["user_id"] = user.id
-        params["signature"] = signature()
+        params["signature"] = signature
         params["market"] = "AppStore"
         params["identify"] = identify
         return params
@@ -77,9 +78,9 @@ class NetUtils{
         let time  =  String(Int64(Date().timeIntervalSince1970 * 1000))
         let user = DataUtils.getUserInfo()
         let password = user.id + Token + time
-        let signature = password.md5
+        let signature = password.md5()
         params["timestamp"] = time
         params["user_id"] = user.id
-        params["signature"] = signature()
+        params["signature"] = signature
     }
 }
