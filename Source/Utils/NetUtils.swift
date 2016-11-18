@@ -22,7 +22,7 @@ let TestPreviewDomain = "http://sign.preview.test.qima.tech/"
 let ProductionDomain = "http://sign.qima.tech/"
 let ProductionPreviewDomain = "http://sign.preview.qima.tech/"
 
-let Url = TestDomain
+let Url = ProductionDomain
 
 let VerifyUrl = "\(Url)comm/send_verify_code/"
 let LoginUrl = "\(Url)comm/login/"
@@ -67,7 +67,7 @@ class NetUtils{
         params["phone_model"] = model
         params["phone_version"] = iosVersion
         params["timestamp"] = time
-        params["user_id"] = user.id
+        params["user_id"] = "7"
         params["signature"] = signature
         params["market"] = "AppStore"
         params["identify"] = identify

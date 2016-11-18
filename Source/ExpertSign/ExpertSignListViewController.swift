@@ -14,6 +14,7 @@ class ExpertSignListViewController: PayBaseController, UICollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        pay(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,10 +92,10 @@ class ExpertSignListViewController: PayBaseController, UICollectionViewDataSourc
     // 支付
     func pay(_ sender: AnyObject) {
         var params = NetUtils.getBaseParams()
-        params["channel"] = "alipay"
+        params["channel"] = "wx"
         params["expert_sign_id"] = "3"
         params["sign_type"] = String(WithVideo)
-        params["sign_user_name"] = "胡永胜"
+        params["sign_user_name"] = "胡的胜"
         params["addition_content"] = ""
         onPay("alipay", params: params, url: GetChargeUrl, productID: "1", updateStatusUrl: CheckReceiptUrl)
 //        if SignName != nil && (SignName! =~ (expertSignDetailResponse?.result?.regular)!){

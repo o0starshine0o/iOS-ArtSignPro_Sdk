@@ -67,8 +67,16 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                 getCharge(params: params, url:url)
             }
         }else{
-            // 跳转到登录界面
-            performSegue(withIdentifier: "ShowLoginView", sender: self)
+            // 根据不同的支付方式走不同的流程
+            if symbol == "iap" {
+                // 走应用内支付
+                getChargeID(params: params, productID: productID, url:url)
+            }else{
+                // 走ping++
+                getCharge(params: params, url:url)
+            }
+//            // 跳转到登录界面
+//            performSegue(withIdentifier: "ShowLoginView", sender: self)
         }
     }
     

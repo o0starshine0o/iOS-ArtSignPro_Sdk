@@ -17,12 +17,12 @@ Pod::Spec.new do |spec|
     spec.dependency            'Toast-Swift'
 
     spec.source              = { :git => 'https://github.com/o0starshine0o/iOS-ArtSignPro_Sdk.git', :tag => "v#{spec.version}" }
-    spec.source_files        = 'Source/**/*.{swift}'
-    spec.resources           = ['Resources/**/*.{storyboard,string}']
-    spec.framework           = 'Foundation', 'UIKit', 'StoreKit'
+    spec.default_subspec     = 'Core', 'Pay', 'Alipay', 'WeChat'
 
-    spec.requires_arc        = true
-    spec.default_subspec     = 'Pay', 'Alipay', 'WeChat'
+    spec.subspec 'Core' do |core|
+        core.source_files='Source/**/*.swift'
+        core.resource='Resources/**/*.{storyboard,string}'
+    end
 
     spec.subspec 'Pay' do |pay|
         pay.source_files = 'lib/*.h', 'lib/Dependencies/Network/*.h'
