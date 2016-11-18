@@ -13,9 +13,36 @@ Pod::Spec.new do |spec|
     spec.dependency            'EZSwiftExtensions'
     spec.dependency            'SwiftyJSON'
     spec.dependency            'CryptoSwift'
+    spec.dependency            'SwiftSpinner'
+    spec.dependency            'Toast-Swift'
 
     spec.source              = { :git => 'https://github.com/o0starshine0o/iOS-ArtSignPro_Sdk.git', :tag => "v#{spec.version}" }
-    spec.source_files        = 'Source/**/*.{h,swift}'
+    spec.source_files        = 'Source/**/*.{swift}'
     spec.resources           = ['Resources/**/*.{storyboard,string}']
-    spec.framework           = 'Foundation', 'UIKit'
+    spec.framework           = 'Foundation', 'UIKit', 'StoreKit'
+
+    spec.requires_arc        = true
+    spec.default_subspec     = 'Pay', 'Alipay', 'WeChat'
+
+    spec.subspec 'Pay' do |pay|
+        pay.source_files = 'lib/*.h', 'lib/Dependencies/Network/*.h'
+        pay.public_header_files = 'lib/*.h', 'lib/Dependencies/Network/*.h'
+        pay.vendored_libraries = 'lib/*.a', 'lib/Dependencies/Network/*.a'
+        pay.resource = 'lib/*.bundle'
+        pay.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security'
+        pay.ios.library = 'c++', 'stdc++', 'z'
+        pay.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+    end
+
+    spec.subspec 'Alipay' do |ss|
+        ss.vendored_libraries = 'lib/Channels/Alipay/*.a'
+        ss.ios.vendored_frameworks = 'lib/Channels/Alipay/AlipaySDK.framework'
+        ss.resource = 'lib/Channels/Alipay/AlipaySDK.bundle'
+        ss.frameworks = 'CoreMotion', 'CoreTelephony'
+        ss.dependency 'ArtSignProSdk/Pay'
+    end
+
+    spec.subspec 'WeChat' do |ss|
+        ss.dependency 'ArtSignProSdk/Pay'
+    end
 end

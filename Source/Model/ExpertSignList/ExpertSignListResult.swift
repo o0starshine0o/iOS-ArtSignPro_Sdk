@@ -7,26 +7,6 @@
 
 import Foundation
 import SwiftyJSON
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
 
 open class ExpertSignListResult: NSObject, NSCoding {
 
@@ -89,14 +69,14 @@ open class ExpertSignListResult: NSObject, NSCoding {
 		if total != nil {
 			dictionary.updateValue(total! as AnyObject, forKey: kExpertSignListResultTotalKey)
 		}
-		if userSigns?.count > 0 {
+		if (userSigns?.count)! > 0 {
 			var temp: [AnyObject] = []
 			for item in userSigns! {
 				temp.append(item.dictionaryRepresentation() as AnyObject)
 			}
 			dictionary.updateValue(temp as AnyObject, forKey: kExpertSignListResultUserSignsKey)
 		}
-		if expertSigns?.count > 0 {
+		if (expertSigns?.count)! > 0 {
 			var temp: [AnyObject] = []
 			for item in expertSigns! {
 				temp.append(item.dictionaryRepresentation() as AnyObject)

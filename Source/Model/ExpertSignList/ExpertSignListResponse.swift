@@ -16,7 +16,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var status: ExpertSignListStatus?
+	open var status: Status?
 	open var result: ExpertSignListResult?
 
 
@@ -36,7 +36,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
     - returns: An initalized instance of the class.
     */
     public init(json: JSON) {
-		status = ExpertSignListStatus(json: json[kExpertSignListResponseStatusKey])
+		status = Status(json: json[kExpertSignListResponseStatusKey])
 		result = ExpertSignListResult(json: json[kExpertSignListResponseResultKey])
 
     }
@@ -61,7 +61,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
 
     // MARK: NSCoding Protocol
     required public init(coder aDecoder: NSCoder) {
-		self.status = aDecoder.decodeObject(forKey: kExpertSignListResponseStatusKey) as? ExpertSignListStatus
+		self.status = aDecoder.decodeObject(forKey: kExpertSignListResponseStatusKey) as? Status
 		self.result = aDecoder.decodeObject(forKey: kExpertSignListResponseResultKey) as? ExpertSignListResult
 
     }

@@ -22,10 +22,34 @@
 		ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32AF1DDC0B66006780B7 /* ExpertSignListExpertSigns.swift */; };
 		ED7E32B51DDC0B66006780B7 /* ExpertSignListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B01DDC0B66006780B7 /* ExpertSignListResponse.swift */; };
 		ED7E32B61DDC0B66006780B7 /* ExpertSignListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */; };
-		ED7E32B71DDC0B66006780B7 /* ExpertSignListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B21DDC0B66006780B7 /* ExpertSignListStatus.swift */; };
 		ED7E32B81DDC0B66006780B7 /* ExpertSignListUserSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */; };
 		EDD06D4A1DDD62CD007AC1E8 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
 		EDD06D4B1DDD62CD007AC1E8 /* ExpertSignListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32C1DDB078400AB8BA5 /* ExpertSignListUserCell.swift */; };
+		EDD06D551DDD8B7D007AC1E8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D501DDD8B7D007AC1E8 /* Response.swift */; };
+		EDD06D561DDD8B7D007AC1E8 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D511DDD8B7D007AC1E8 /* Status.swift */; };
+		EDD06D571DDD8B7D007AC1E8 /* PayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D531DDD8B7D007AC1E8 /* PayResponse.swift */; };
+		EDD06D581DDD8B7D007AC1E8 /* PayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D541DDD8B7D007AC1E8 /* PayResult.swift */; };
+		EDD06D5C1DDD90EB007AC1E8 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D5B1DDD90EB007AC1E8 /* AlertUtils.swift */; };
+		EDD06D6C1DDDA5DD007AC1E8 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDD06D611DDDA5DD007AC1E8 /* AlipaySDK.bundle */; };
+		EDD06D6D1DDDA5DD007AC1E8 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D621DDDA5DD007AC1E8 /* AlipaySDK.framework */; };
+		EDD06D6E1DDDA5DD007AC1E8 /* libpingpp+alipay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D631DDDA5DD007AC1E8 /* libpingpp+alipay.a */; };
+		EDD06D6F1DDDA5DD007AC1E8 /* libpingpp+network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D661DDDA5DD007AC1E8 /* libpingpp+network.a */; };
+		EDD06D701DDDA5DE007AC1E8 /* PingppURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD06D671DDDA5DD007AC1E8 /* PingppURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD06D711DDDA5DE007AC1E8 /* libpingpp+webview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D691DDDA5DD007AC1E8 /* libpingpp+webview.a */; };
+		EDD06D721DDDA5DE007AC1E8 /* Pingpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDD06D6A1DDDA5DD007AC1E8 /* Pingpp.bundle */; };
+		EDD06D731DDDA5DE007AC1E8 /* Pingpp.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD06D6B1DDDA5DD007AC1E8 /* Pingpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD06D751DDDA7E2007AC1E8 /* ArtSignProSdk-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD06D741DDDA7E2007AC1E8 /* ArtSignProSdk-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD06D791DDDAC60007AC1E8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D781DDDAC60007AC1E8 /* libz.tbd */; };
+		EDD06D7D1DDDAC6E007AC1E8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D7C1DDDAC6E007AC1E8 /* libc++.tbd */; };
+		EDD06D7F1DDDAC7A007AC1E8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D7E1DDDAC7A007AC1E8 /* libsqlite3.tbd */; };
+		EDD06D811DDDACCA007AC1E8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D801DDDACCA007AC1E8 /* libstdc++.tbd */; };
+		EDD06D831DDDAD1B007AC1E8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D821DDDAD1B007AC1E8 /* CoreTelephony.framework */; };
+		EDD06D851DDDAD5D007AC1E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D841DDDAD5D007AC1E8 /* Security.framework */; };
+		EDD06D871DDDAD72007AC1E8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D861DDDAD72007AC1E8 /* CoreMotion.framework */; };
+		EDD06D891DDDAD81007AC1E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D881DDDAD81007AC1E8 /* CFNetwork.framework */; };
+		EDD06D8B1DDDAD8D007AC1E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D8A1DDDAD8D007AC1E8 /* SystemConfiguration.framework */; };
+		EDD06D8D1DDDB4C1007AC1E8 /* PayBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D4D1DDD8A16007AC1E8 /* PayBaseController.swift */; };
+		EDD06D8F1DDDB7B1007AC1E8 /* libpingppcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D8E1DDDB7B1007AC1E8 /* libpingppcore.a */; };
 		EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */; };
 		EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5AB6D1DD991060035696E /* GenerateProblem.swift */; };
 /* End PBXBuildFile section */
@@ -65,9 +89,34 @@
 		ED7E32AF1DDC0B66006780B7 /* ExpertSignListExpertSigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListExpertSigns.swift; sourceTree = "<group>"; };
 		ED7E32B01DDC0B66006780B7 /* ExpertSignListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListResponse.swift; sourceTree = "<group>"; };
 		ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListResult.swift; sourceTree = "<group>"; };
-		ED7E32B21DDC0B66006780B7 /* ExpertSignListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListStatus.swift; sourceTree = "<group>"; };
 		ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListUserSigns.swift; sourceTree = "<group>"; };
 		EDD06D491DDD53FF007AC1E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.strings"; sourceTree = "<group>"; };
+		EDD06D4D1DDD8A16007AC1E8 /* PayBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayBaseController.swift; sourceTree = "<group>"; };
+		EDD06D501DDD8B7D007AC1E8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EDD06D511DDD8B7D007AC1E8 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		EDD06D531DDD8B7D007AC1E8 /* PayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayResponse.swift; sourceTree = "<group>"; };
+		EDD06D541DDD8B7D007AC1E8 /* PayResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayResult.swift; sourceTree = "<group>"; };
+		EDD06D5B1DDD90EB007AC1E8 /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
+		EDD06D611DDDA5DD007AC1E8 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		EDD06D621DDDA5DD007AC1E8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		EDD06D631DDDA5DD007AC1E8 /* libpingpp+alipay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+alipay.a"; sourceTree = "<group>"; };
+		EDD06D661DDDA5DD007AC1E8 /* libpingpp+network.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+network.a"; sourceTree = "<group>"; };
+		EDD06D671DDDA5DD007AC1E8 /* PingppURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingppURLResponse.h; sourceTree = "<group>"; };
+		EDD06D691DDDA5DD007AC1E8 /* libpingpp+webview.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+webview.a"; sourceTree = "<group>"; };
+		EDD06D6A1DDDA5DD007AC1E8 /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
+		EDD06D6B1DDDA5DD007AC1E8 /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
+		EDD06D741DDDA7E2007AC1E8 /* ArtSignProSdk-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArtSignProSdk-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDD06D781DDDAC60007AC1E8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EDD06D7A1DDDAC68007AC1E8 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		EDD06D7C1DDDAC6E007AC1E8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EDD06D7E1DDDAC7A007AC1E8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EDD06D801DDDACCA007AC1E8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		EDD06D821DDDAD1B007AC1E8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		EDD06D841DDDAD5D007AC1E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EDD06D861DDDAD72007AC1E8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EDD06D881DDDAD81007AC1E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EDD06D8A1DDDAD8D007AC1E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EDD06D8E1DDDB7B1007AC1E8 /* libpingppcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingppcore.a; sourceTree = "<group>"; };
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		EDD5AB6B1DD98E450035696E /* ArithmeticProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticProblem.swift; path = Source/ArithmeticProblem.swift; sourceTree = SOURCE_ROOT; };
@@ -89,7 +138,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD06D8B1DDDAD8D007AC1E8 /* SystemConfiguration.framework in Frameworks */,
+				EDD06D891DDDAD81007AC1E8 /* CFNetwork.framework in Frameworks */,
+				EDD06D871DDDAD72007AC1E8 /* CoreMotion.framework in Frameworks */,
+				EDD06D851DDDAD5D007AC1E8 /* Security.framework in Frameworks */,
+				EDD06D831DDDAD1B007AC1E8 /* CoreTelephony.framework in Frameworks */,
+				EDD06D6D1DDDA5DD007AC1E8 /* AlipaySDK.framework in Frameworks */,
+				EDD06D811DDDACCA007AC1E8 /* libstdc++.tbd in Frameworks */,
+				EDD06D7F1DDDAC7A007AC1E8 /* libsqlite3.tbd in Frameworks */,
+				EDD06D8F1DDDB7B1007AC1E8 /* libpingppcore.a in Frameworks */,
+				EDD06D7D1DDDAC6E007AC1E8 /* libc++.tbd in Frameworks */,
+				EDD06D791DDDAC60007AC1E8 /* libz.tbd in Frameworks */,
+				EDD06D6F1DDDA5DD007AC1E8 /* libpingpp+network.a in Frameworks */,
+				EDD06D711DDDA5DE007AC1E8 /* libpingpp+webview.a in Frameworks */,
 				473EB5EFD696A4489A75B2FD /* Pods_ArtSignProSdk.framework in Frameworks */,
+				EDD06D6E1DDDA5DD007AC1E8 /* libpingpp+alipay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +162,16 @@
 		3DE69C3A8A51F52B5C6F311A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDD06D8A1DDDAD8D007AC1E8 /* SystemConfiguration.framework */,
+				EDD06D881DDDAD81007AC1E8 /* CFNetwork.framework */,
+				EDD06D861DDDAD72007AC1E8 /* CoreMotion.framework */,
+				EDD06D841DDDAD5D007AC1E8 /* Security.framework */,
+				EDD06D821DDDAD1B007AC1E8 /* CoreTelephony.framework */,
+				EDD06D801DDDACCA007AC1E8 /* libstdc++.tbd */,
+				EDD06D7E1DDDAC7A007AC1E8 /* libsqlite3.tbd */,
+				EDD06D7C1DDDAC6E007AC1E8 /* libc++.tbd */,
+				EDD06D7A1DDDAC68007AC1E8 /* libc.tbd */,
+				EDD06D781DDDAC60007AC1E8 /* libz.tbd */,
 				F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */,
 				A1617C89FE481F67F9E251C8 /* Pods_ArtSignProSdk.framework */,
 				DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */,
@@ -140,6 +213,7 @@
 		ED7E328D1DDC00A5006780B7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EDD06D5B1DDD90EB007AC1E8 /* AlertUtils.swift */,
 				ED7E328E1DDC00BC006780B7 /* NetUtils.swift */,
 				ED7E329F1DDC05FA006780B7 /* DataUtils.swift */,
 			);
@@ -159,6 +233,8 @@
 		ED7E32A61DDC0A54006780B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDD06D4F1DDD8B7D007AC1E8 /* Common */,
+				EDD06D521DDD8B7D007AC1E8 /* Pay */,
 				ED7E32AE1DDC0B66006780B7 /* ExpertSignList */,
 				ED7E32A71DDC0A65006780B7 /* PayMethod */,
 			);
@@ -182,7 +258,6 @@
 				ED7E32AF1DDC0B66006780B7 /* ExpertSignListExpertSigns.swift */,
 				ED7E32B01DDC0B66006780B7 /* ExpertSignListResponse.swift */,
 				ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */,
-				ED7E32B21DDC0B66006780B7 /* ExpertSignListStatus.swift */,
 				ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */,
 			);
 			path = ExpertSignList;
@@ -191,15 +266,100 @@
 		ED7E32BC1DDC3847006780B7 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				EDD06D741DDDA7E2007AC1E8 /* ArtSignProSdk-Bridging-Header.h */,
 			);
 			name = Headers;
 			path = Source/Headers;
 			sourceTree = SOURCE_ROOT;
 		};
+		EDD06D4C1DDD89FB007AC1E8 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D4D1DDD8A16007AC1E8 /* PayBaseController.swift */,
+			);
+			name = Pay;
+			path = Source/Pay;
+			sourceTree = SOURCE_ROOT;
+		};
+		EDD06D4F1DDD8B7D007AC1E8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D501DDD8B7D007AC1E8 /* Response.swift */,
+				EDD06D511DDD8B7D007AC1E8 /* Status.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EDD06D521DDD8B7D007AC1E8 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D531DDD8B7D007AC1E8 /* PayResponse.swift */,
+				EDD06D541DDD8B7D007AC1E8 /* PayResult.swift */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		EDD06D5E1DDDA5DD007AC1E8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D8E1DDDB7B1007AC1E8 /* libpingppcore.a */,
+				EDD06D5F1DDDA5DD007AC1E8 /* Channels */,
+				EDD06D641DDDA5DD007AC1E8 /* Dependencies */,
+				EDD06D6A1DDDA5DD007AC1E8 /* Pingpp.bundle */,
+				EDD06D6B1DDDA5DD007AC1E8 /* Pingpp.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		EDD06D5F1DDDA5DD007AC1E8 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D601DDDA5DD007AC1E8 /* Alipay */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		EDD06D601DDDA5DD007AC1E8 /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D611DDDA5DD007AC1E8 /* AlipaySDK.bundle */,
+				EDD06D621DDDA5DD007AC1E8 /* AlipaySDK.framework */,
+				EDD06D631DDDA5DD007AC1E8 /* libpingpp+alipay.a */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		EDD06D641DDDA5DD007AC1E8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D651DDDA5DD007AC1E8 /* Network */,
+				EDD06D681DDDA5DD007AC1E8 /* WebView */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		EDD06D651DDDA5DD007AC1E8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D661DDDA5DD007AC1E8 /* libpingpp+network.a */,
+				EDD06D671DDDA5DD007AC1E8 /* PingppURLResponse.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EDD06D681DDDA5DD007AC1E8 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				EDD06D691DDDA5DD007AC1E8 /* libpingpp+webview.a */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		EDD5AB561DD973600035696E = {
 			isa = PBXGroup;
 			children = (
 				ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */,
+				EDD06D5E1DDDA5DD007AC1E8 /* lib */,
 				ED62F3261DDAC1F100AB8BA5 /* Resources */,
 				EDD5AB621DD973610035696E /* Source */,
 				ED7E32951DDC054A006780B7 /* ArtSignProSdkTests */,
@@ -221,6 +381,7 @@
 		EDD5AB621DD973610035696E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EDD06D4C1DDD89FB007AC1E8 /* Pay */,
 				ED7E32BC1DDC3847006780B7 /* Headers */,
 				ED7E32A61DDC0A54006780B7 /* Model */,
 				ED7E328D1DDC00A5006780B7 /* Utils */,
@@ -241,6 +402,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD06D731DDDA5DE007AC1E8 /* Pingpp.h in Headers */,
+				EDD06D751DDDA7E2007AC1E8 /* ArtSignProSdk-Bridging-Header.h in Headers */,
+				EDD06D701DDDA5DE007AC1E8 /* PingppURLResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +507,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD06D6C1DDDA5DD007AC1E8 /* AlipaySDK.bundle in Resources */,
 				ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */,
 				ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */,
+				EDD06D721DDDA5DE007AC1E8 /* Pingpp.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,21 +607,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD06D5C1DDD90EB007AC1E8 /* AlertUtils.swift in Sources */,
 				EDD06D4A1DDD62CD007AC1E8 /* ExpertSignListViewController.swift in Sources */,
 				EDD06D4B1DDD62CD007AC1E8 /* ExpertSignListUserCell.swift in Sources */,
 				ED7E32B81DDC0B66006780B7 /* ExpertSignListUserSigns.swift in Sources */,
+				EDD06D551DDD8B7D007AC1E8 /* Response.swift in Sources */,
 				EDD5AB6E1DD991060035696E /* GenerateProblem.swift in Sources */,
+				EDD06D561DDD8B7D007AC1E8 /* Status.swift in Sources */,
 				ED7E328F1DDC00BC006780B7 /* NetUtils.swift in Sources */,
 				ED7E32AD1DDC0A8D006780B7 /* PayMethodStatus.swift in Sources */,
-				ED7E32B71DDC0B66006780B7 /* ExpertSignListStatus.swift in Sources */,
 				ED7E32A01DDC05FA006780B7 /* DataUtils.swift in Sources */,
 				ED7E32AB1DDC0A8D006780B7 /* PayMethodResponse.swift in Sources */,
 				ED7E32B51DDC0B66006780B7 /* ExpertSignListResponse.swift in Sources */,
+				EDD06D571DDD8B7D007AC1E8 /* PayResponse.swift in Sources */,
 				ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */,
+				EDD06D581DDD8B7D007AC1E8 /* PayResult.swift in Sources */,
 				ED7E32AC1DDC0A8D006780B7 /* PayMethodResult.swift in Sources */,
 				ED62F3281DDAC44E00AB8BA5 /* File.swift in Sources */,
 				EDD5AB6C1DD98E450035696E /* ArithmeticProblem.swift in Sources */,
 				ED7E32B61DDC0B66006780B7 /* ExpertSignListResult.swift in Sources */,
+				EDD06D8D1DDDB4C1007AC1E8 /* PayBaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CB4361B0A857795FE9F03D5 /* Pods-ArtSignProSdk.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -628,14 +800,51 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/Channels/Alipay",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/Channels/Alipay",
+					"$(PROJECT_DIR)/lib/Dependencies/Network",
+					"$(PROJECT_DIR)/lib/Dependencies/WebView",
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"EZSwiftExtensions\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"SwiftSpinner\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-ObjC",
+					"-l\"z\"",
+					"-l\"stdc++\"",
+					"-l\"sqlite3\"",
+					"-l\"pingppcore\"",
+					"-l\"pingpp+network\"",
+					"-l\"pingpp+alipay\"",
+					"-l\"c++\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Headers/ArtSignProSdk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -645,6 +854,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3ABE4B8DB187B8BE821F0C2C /* Pods-ArtSignProSdk.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -653,14 +863,51 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/Channels/Alipay",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/Channels/Alipay",
+					"$(PROJECT_DIR)/lib/Dependencies/Network",
+					"$(PROJECT_DIR)/lib/Dependencies/WebView",
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"EZSwiftExtensions\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"SwiftSpinner\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-ObjC",
+					"-l\"z\"",
+					"-l\"stdc++\"",
+					"-l\"sqlite3\"",
+					"-l\"pingppcore\"",
+					"-l\"pingpp+network\"",
+					"-l\"pingpp+alipay\"",
+					"-l\"c++\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qicode.ArtSignPro-Sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Headers/ArtSignProSdk-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

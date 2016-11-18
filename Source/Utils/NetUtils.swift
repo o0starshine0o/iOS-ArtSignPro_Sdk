@@ -22,7 +22,7 @@ let TestPreviewDomain = "http://sign.preview.test.qima.tech/"
 let ProductionDomain = "http://sign.qima.tech/"
 let ProductionPreviewDomain = "http://sign.preview.qima.tech/"
 
-let Url = ProductionDomain
+let Url = TestDomain
 
 let VerifyUrl = "\(Url)comm/send_verify_code/"
 let LoginUrl = "\(Url)comm/login/"

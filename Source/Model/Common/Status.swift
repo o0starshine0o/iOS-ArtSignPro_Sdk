@@ -1,19 +1,19 @@
 //
-//  ExpertSignListStatus.swift
+//  PayMethodStatus.swift
 //
-//  Created by AbelHu on 16/5/6
+//  Created by AbelHu on 16/4/21
 //  Copyright (c) QiCode. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-open class ExpertSignListStatus: NSObject, NSCoding {
+open class Status: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
-	internal let kExpertSignListStatusCodeKey: String = "code"
-	internal let kExpertSignListStatusExtraKey: String = "extra"
-	internal let kExpertSignListStatusDescriptionValueKey: String = "description"
+	internal let kPayMethodStatusCodeKey: String = "code"
+	internal let kPayMethodStatusExtraKey: String = "extra"
+	internal let kPayMethodStatusDescriptionValueKey: String = "description"
 
 
     // MARK: Properties
@@ -38,9 +38,9 @@ open class ExpertSignListStatus: NSObject, NSCoding {
     - returns: An initalized instance of the class.
     */
     public init(json: JSON) {
-		code = json[kExpertSignListStatusCodeKey].string
-		extra = json[kExpertSignListStatusExtraKey].string
-		descriptionValue = json[kExpertSignListStatusDescriptionValueKey].string
+		code = json[kPayMethodStatusCodeKey].string
+		extra = json[kPayMethodStatusExtraKey].string
+		descriptionValue = json[kPayMethodStatusDescriptionValueKey].string
 
     }
 
@@ -53,13 +53,13 @@ open class ExpertSignListStatus: NSObject, NSCoding {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if code != nil {
-			dictionary.updateValue(code! as AnyObject, forKey: kExpertSignListStatusCodeKey)
+			dictionary.updateValue(code! as AnyObject, forKey: kPayMethodStatusCodeKey)
 		}
 		if extra != nil {
-			dictionary.updateValue(extra! as AnyObject, forKey: kExpertSignListStatusExtraKey)
+			dictionary.updateValue(extra! as AnyObject, forKey: kPayMethodStatusExtraKey)
 		}
 		if descriptionValue != nil {
-			dictionary.updateValue(descriptionValue! as AnyObject, forKey: kExpertSignListStatusDescriptionValueKey)
+			dictionary.updateValue(descriptionValue! as AnyObject, forKey: kPayMethodStatusDescriptionValueKey)
 		}
 
         return dictionary
@@ -67,16 +67,16 @@ open class ExpertSignListStatus: NSObject, NSCoding {
 
     // MARK: NSCoding Protocol
     required public init(coder aDecoder: NSCoder) {
-		self.code = aDecoder.decodeObject(forKey: kExpertSignListStatusCodeKey) as? String
-		self.extra = aDecoder.decodeObject(forKey: kExpertSignListStatusExtraKey) as? String
-		self.descriptionValue = aDecoder.decodeObject(forKey: kExpertSignListStatusDescriptionValueKey) as? String
+		self.code = aDecoder.decodeObject(forKey: kPayMethodStatusCodeKey) as? String
+		self.extra = aDecoder.decodeObject(forKey: kPayMethodStatusExtraKey) as? String
+		self.descriptionValue = aDecoder.decodeObject(forKey: kPayMethodStatusDescriptionValueKey) as? String
 
     }
 
     open func encode(with aCoder: NSCoder) {
-		aCoder.encode(code, forKey: kExpertSignListStatusCodeKey)
-		aCoder.encode(extra, forKey: kExpertSignListStatusExtraKey)
-		aCoder.encode(descriptionValue, forKey: kExpertSignListStatusDescriptionValueKey)
+		aCoder.encode(code, forKey: kPayMethodStatusCodeKey)
+		aCoder.encode(extra, forKey: kPayMethodStatusExtraKey)
+		aCoder.encode(descriptionValue, forKey: kPayMethodStatusDescriptionValueKey)
 
     }
 

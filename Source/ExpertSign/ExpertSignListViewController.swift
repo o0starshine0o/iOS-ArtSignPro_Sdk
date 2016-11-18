@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExpertSignListViewController: PayBaseController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +86,34 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
             print(error)
         }
 //        indicatorView.stopAnimating()
+    }
+    
+    // 支付
+    func pay(_ sender: AnyObject) {
+        var params = NetUtils.getBaseParams()
+        params["channel"] = "alipay"
+        params["expert_sign_id"] = "3"
+        params["sign_type"] = String(WithVideo)
+        params["sign_user_name"] = "胡永胜"
+        params["addition_content"] = ""
+        onPay("alipay", params: params, url: GetChargeUrl, productID: "1", updateStatusUrl: CheckReceiptUrl)
+//        if SignName != nil && (SignName! =~ (expertSignDetailResponse?.result?.regular)!){
+//            var params = NetUtils.getBaseParams()
+//            params["channel"] = payMethodResult?.symbol!
+//            params["expert_sign_id"] = expertId
+//            params["sign_type"] = withVideo ? String(WithVideo) : String(WithoutVideo)
+//            params["sign_user_name"] = SignName
+//            params["addition_content"] = request == nil ? "" : request!
+//            var url:String?
+//            if payMethodResult?.symbol == "iap" {
+//                url = GetChargeIDUrl
+//            }else{
+//                url = GetChargeUrl
+//            }
+//            onPay((payMethodResult?.symbol)!, params: params, url: url!, productID: productId, updateStatusUrl: CheckReceiptUrl)
+//        }else{
+//            AlertUtils.showAlert(viewController: self, title: "格式错误", message: "亲，填写有效的姓名哦～～～\n（英文签需要使用英文哦）")
+//        }
     }
 
 }

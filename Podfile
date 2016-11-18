@@ -14,8 +14,10 @@ target "ArtSignProSdk" do
     pod 'SwiftyJSON'
     # sha md5
     pod 'CryptoSwift'
-    # ping++
-    pod ''
+    # loading toast
+    pod 'SwiftSpinner'
+    # toast
+    pod 'Toast-Swift'
 end
 
 target "ArtSignProSdkTests" do
