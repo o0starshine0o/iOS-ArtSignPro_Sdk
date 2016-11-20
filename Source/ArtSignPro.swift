@@ -29,3 +29,7 @@ public func setEnvironment(environment:EnvironmentType){
     Environment = environment
 }
 
+public func login(){
+    DataUtils.login(id:"7", name:"胡永胜", phone:"13018019891")
+}
+

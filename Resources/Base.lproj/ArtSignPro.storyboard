@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,10 +34,10 @@
                                 <rect key="frame" x="189" y="350" width="37" height="37"/>
                                 <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hkq-iK-nqc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hkq-iK-nqc">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hhi-e4-nlW">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hhi-e4-nlW">
                                     <size key="itemSize" width="388" height="169"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -52,6 +53,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8c-Xl-oc1">
                                                     <rect key="frame" x="8" y="8" width="153" height="153"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="m8c-Xl-oc1" secondAttribute="height" multiplier="1:1" id="iL6-Eg-5Kx"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8G-nU-1T6">
                                                     <rect key="frame" x="169" y="8" width="211" height="153"/>
@@ -123,7 +127,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DividerCell" id="sbX-OU-m78">
-                                        <rect key="frame" x="13" y="179" width="386" height="84"/>
+                                        <rect key="frame" x="14" y="169" width="386" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="386" height="84"/>
@@ -146,29 +150,29 @@
                                         <size key="customSize" width="386" height="84"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExampleCell" id="LeY-jX-o2s" customClass="ExpertSignExampleCell" customModule="ArtSignProSdk" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="273" width="214" height="279"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="100" y="253" width="214" height="279"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="214" height="279"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cm-2y-QHa">
-                                                    <rect key="frame" x="0.0" y="8" width="214" height="214"/>
+                                                    <rect key="frame" x="8" y="8" width="198" height="198"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6cm-2y-QHa" secondAttribute="height" multiplier="1:1" id="7WR-mp-Yc9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T4-ZO-r6c">
-                                                    <rect key="frame" x="67.666666666666657" y="230" width="78.999999999999972" height="41"/>
+                                                    <rect key="frame" x="67.666666666666657" y="214" width="78.999999999999972" height="57"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-J1-bdw">
-                                                            <rect key="frame" x="0.0" y="0.0" width="34" height="41"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="34" height="57"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-7e-YY0">
-                                                            <rect key="frame" x="34" y="0.0" width="44.999999999999986" height="41"/>
+                                                            <rect key="frame" x="34" y="0.0" width="44.999999999999986" height="57"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -189,10 +193,10 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="topMargin" secondItem="6cm-2y-QHa" secondAttribute="top" id="0Ii-0X-eXH"/>
-                                            <constraint firstItem="6cm-2y-QHa" firstAttribute="centerX" secondItem="LeY-jX-o2s" secondAttribute="centerX" id="CfM-RH-iow"/>
-                                            <constraint firstItem="6cm-2y-QHa" firstAttribute="width" secondItem="LeY-jX-o2s" secondAttribute="width" id="DLe-sd-o5A"/>
                                             <constraint firstItem="5T4-ZO-r6c" firstAttribute="centerX" secondItem="LeY-jX-o2s" secondAttribute="centerX" id="HrP-RU-pW8"/>
                                             <constraint firstItem="5T4-ZO-r6c" firstAttribute="top" secondItem="6cm-2y-QHa" secondAttribute="bottom" constant="8" id="T42-3f-non"/>
+                                            <constraint firstItem="6cm-2y-QHa" firstAttribute="leading" secondItem="LeY-jX-o2s" secondAttribute="leadingMargin" id="n0o-Wd-VqD"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6cm-2y-QHa" secondAttribute="trailing" id="rWT-WA-8Tl"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="5T4-ZO-r6c" secondAttribute="bottom" id="wzl-cq-HRK"/>
                                         </constraints>
                                         <size key="customSize" width="214" height="279"/>
@@ -200,6 +204,10 @@
                                             <outlet property="imagePreview" destination="6cm-2y-QHa" id="Twb-rG-Em5"/>
                                             <outlet property="nameView" destination="gE1-J1-bdw" id="o4f-hb-WfE"/>
                                             <outlet property="priceView" destination="fbQ-7e-YY0" id="DH9-mc-Jbl"/>
+                                            <segue destination="NUv-hT-wVh" kind="show" identifier="ShowExpertSignDetail" id="5xC-RS-8qt">
+                                                <segue key="commit" inheritsFrom="parent" id="B2a-wv-VuX"/>
+                                                <segue key="preview" inheritsFrom="commit" id="uVy-HZ-9rF"/>
+                                            </segue>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -234,6 +242,132 @@
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="60.326086956521742"/>
         </scene>
+        <!--Expert Sign Detail View Controller-->
+        <scene sceneID="dhj-Cl-ux9">
+            <objects>
+                <viewController id="NUv-hT-wVh" customClass="ExpertSignDetailViewController" customModule="ArtSignProSdk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qsl-KP-Uc7"/>
+                        <viewControllerLayoutGuide type="bottom" id="sjR-e0-u1v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YZZ-TI-tpK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yR4-P8-1UJ">
+                                <rect key="frame" x="189" y="350" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-qp-elF">
+                                <rect key="frame" x="0.0" y="64" width="414" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="146" id="dET-tv-PMu" customClass="ExpertSignImageCell" customModule="ArtSignProSdk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dET-tv-PMu" id="rdI-6X-HlS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cN-Dn-CNr">
+                                                    <rect key="frame" x="0.0" y="8" width="414" height="129"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2cN-Dn-CNr" secondAttribute="bottom" id="3ZP-Hh-wiB"/>
+                                                <constraint firstAttribute="trailing" secondItem="2cN-Dn-CNr" secondAttribute="trailing" id="6pN-K1-maU"/>
+                                                <constraint firstItem="2cN-Dn-CNr" firstAttribute="top" secondItem="rdI-6X-HlS" secondAttribute="topMargin" id="CIk-Kp-pQF"/>
+                                                <constraint firstItem="2cN-Dn-CNr" firstAttribute="leading" secondItem="rdI-6X-HlS" secondAttribute="leading" id="hTJ-6s-2hj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="showImageView" destination="2cN-Dn-CNr" id="Rjk-yo-opl"/>
+                                            <segue destination="A0b-Sj-mw8" kind="show" identifier="ShowExpertSignPay" id="TbF-8p-a26">
+                                                <segue key="commit" inheritsFrom="parent" id="w5p-uQ-JKL"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Xhd-UH-XEI"/>
+                                            </segue>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" id="vHp-o6-pJP" customClass="ExpertSignImageCell" customModule="ArtSignProSdk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vHp-o6-pJP" id="HIG-FD-Xq8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdH-cc-1ej">
+                                                    <rect key="frame" x="0.0" y="8" width="414" height="129.66666666666666"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qdH-cc-1ej" secondAttribute="bottom" id="9d1-xM-419"/>
+                                                <constraint firstAttribute="trailing" secondItem="qdH-cc-1ej" secondAttribute="trailing" id="cQU-Jq-Pld"/>
+                                                <constraint firstAttribute="topMargin" secondItem="qdH-cc-1ej" secondAttribute="top" id="l4w-7e-QQt"/>
+                                                <constraint firstItem="qdH-cc-1ej" firstAttribute="leading" secondItem="HIG-FD-Xq8" secondAttribute="leading" id="oKo-st-AUV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="showImageView" destination="qdH-cc-1ej" id="VJL-Y4-j2E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NUv-hT-wVh" id="ukp-6t-xig"/>
+                                    <outlet property="delegate" destination="NUv-hT-wVh" id="by0-af-vGZ"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gc-XK-AlK">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.47450980390000003" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hbG-id-1qb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Design">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HrT-qp-elF" firstAttribute="top" secondItem="Qsl-KP-Uc7" secondAttribute="bottom" id="6VR-kU-mf6"/>
+                            <constraint firstItem="yR4-P8-1UJ" firstAttribute="centerX" secondItem="YZZ-TI-tpK" secondAttribute="centerX" id="AlC-MA-bl5"/>
+                            <constraint firstItem="sjR-e0-u1v" firstAttribute="top" secondItem="7Gc-XK-AlK" secondAttribute="bottom" id="G0v-ks-ogt"/>
+                            <constraint firstAttribute="trailing" secondItem="HrT-qp-elF" secondAttribute="trailing" id="S59-ks-RNw"/>
+                            <constraint firstAttribute="trailing" secondItem="7Gc-XK-AlK" secondAttribute="trailing" id="SUC-Ke-q76"/>
+                            <constraint firstItem="HrT-qp-elF" firstAttribute="leading" secondItem="YZZ-TI-tpK" secondAttribute="leading" id="Y7o-D9-bF7"/>
+                            <constraint firstItem="7Gc-XK-AlK" firstAttribute="top" secondItem="HrT-qp-elF" secondAttribute="bottom" id="knp-d5-TOX"/>
+                            <constraint firstItem="7Gc-XK-AlK" firstAttribute="leading" secondItem="YZZ-TI-tpK" secondAttribute="leading" id="tiX-uM-5Br"/>
+                            <constraint firstItem="yR4-P8-1UJ" firstAttribute="centerY" secondItem="YZZ-TI-tpK" secondAttribute="centerY" id="vuS-Qu-mTW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="yR4-P8-1UJ" id="SQC-11-l5m"/>
+                        <outlet property="tableView" destination="HrT-qp-elF" id="fsu-q0-mM7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAe-El-l5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="59.510869565217398"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4fb-nN-0pH">
+            <objects>
+                <viewController id="A0b-Sj-mw8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mxI-TX-PAs"/>
+                        <viewControllerLayoutGuide type="bottom" id="2eH-Jn-s6y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X3C-Ym-tuO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkH-MY-HZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="1010"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vtb-eM-UH2">
             <objects>
@@ -253,4 +387,8 @@
             <point key="canvasLocation" x="28" y="60.719640179910051"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5xC-RS-8qt"/>
+        <segue reference="TbF-8p-a26"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var retryView: UIButton!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UICollectionView!
@@ -31,18 +31,31 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if sender is ExpertSignExampleCell {
+            let cell = sender as! ExpertSignExampleCell
+            selectExpertSign = cell.expertSign
+        }else if sender is UIButton {
+            let button = sender as! UIButton
+            selectUserSign = expertSignListResponse?.result?.userSigns?[button.tag]
+        }
+        
+        switch segue.identifier! {
+//        case "ShowVideo":
+//            let viewController = segue.destination as! VideoViewController
+//            viewController.videoUrl = selectUserSign?.videoUrl
+//        case "ShowImitate":
+//            let viewController = segue.destination as! ImitateViewController
+//            viewController.onSegueBackID = "SignListBack"
+//            viewController.imageUrl = selectUserSign?.imageUrl
+        case "ShowExpertSignDetail":
+            let viewController = segue.destination as! ExpertSignDetailViewController
+            viewController.expertId = String((selectExpertSign?.expertSignId)!)
+            viewController.productId = (selectExpertSign?.iosProductPayId)!
+        default:
+            break
+        }
     }
-    */
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         if (expertSignListResponse?.result?.userSigns?.count)! > 0 {

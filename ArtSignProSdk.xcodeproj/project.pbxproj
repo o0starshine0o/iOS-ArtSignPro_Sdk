@@ -51,6 +51,11 @@
 		EDFCBF021DE022D800168571 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
 		EDFCBF051DE02B2600168571 /* ExpertSignExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF031DE02B2600168571 /* ExpertSignExampleCell.swift */; };
 		EDFCBF061DE02B2600168571 /* ExpertSignUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF041DE02B2600168571 /* ExpertSignUserCell.swift */; };
+		EDFCBF101DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF0C1DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift */; };
+		EDFCBF111DE18BAA00168571 /* ExpertSignDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF0D1DE18BAA00168571 /* ExpertSignDetailResponse.swift */; };
+		EDFCBF121DE18BAA00168571 /* ExpertSignDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF0E1DE18BAA00168571 /* ExpertSignDetailResult.swift */; };
+		EDFCBF191DE18E6000168571 /* ExpertSignImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF151DE18E6000168571 /* ExpertSignImageCell.swift */; };
+		EDFCBF1C1DE196B000168571 /* ExpertSignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF091DE187AA00168571 /* ExpertSignDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,11 @@
 		EDFCBF001DE0060200168571 /* ArtSignPro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtSignPro.swift; path = Source/ArtSignPro.swift; sourceTree = SOURCE_ROOT; };
 		EDFCBF031DE02B2600168571 /* ExpertSignExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignExampleCell.swift; sourceTree = "<group>"; };
 		EDFCBF041DE02B2600168571 /* ExpertSignUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignUserCell.swift; sourceTree = "<group>"; };
+		EDFCBF091DE187AA00168571 /* ExpertSignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignDetailViewController.swift; sourceTree = "<group>"; };
+		EDFCBF0C1DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignDetailDetailsDesignImage.swift; sourceTree = "<group>"; };
+		EDFCBF0D1DE18BAA00168571 /* ExpertSignDetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignDetailResponse.swift; sourceTree = "<group>"; };
+		EDFCBF0E1DE18BAA00168571 /* ExpertSignDetailResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignDetailResult.swift; sourceTree = "<group>"; };
+		EDFCBF151DE18E6000168571 /* ExpertSignImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignImageCell.swift; sourceTree = "<group>"; };
 		F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArithmeticTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,8 +219,10 @@
 		ED62F3291DDB052B00AB8BA5 /* ExpertSign */ = {
 			isa = PBXGroup;
 			children = (
+				EDFCBF091DE187AA00168571 /* ExpertSignDetailViewController.swift */,
 				ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */,
 				EDFCBF031DE02B2600168571 /* ExpertSignExampleCell.swift */,
+				EDFCBF151DE18E6000168571 /* ExpertSignImageCell.swift */,
 				EDFCBF041DE02B2600168571 /* ExpertSignUserCell.swift */,
 			);
 			name = ExpertSign;
@@ -240,6 +252,7 @@
 		ED7E32A61DDC0A54006780B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDFCBF0B1DE18BAA00168571 /* ExpertSignDetail */,
 				EDD06D4F1DDD8B7D007AC1E8 /* Common */,
 				EDD06D521DDD8B7D007AC1E8 /* Pay */,
 				ED7E32AE1DDC0B66006780B7 /* ExpertSignList */,
@@ -397,6 +410,16 @@
 			);
 			name = Source;
 			path = "ArtSignPro-Sdk";
+			sourceTree = "<group>";
+		};
+		EDFCBF0B1DE18BAA00168571 /* ExpertSignDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCBF0C1DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift */,
+				EDFCBF0D1DE18BAA00168571 /* ExpertSignDetailResponse.swift */,
+				EDFCBF0E1DE18BAA00168571 /* ExpertSignDetailResult.swift */,
+			);
+			path = ExpertSignDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +634,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFCBF1C1DE196B000168571 /* ExpertSignDetailViewController.swift in Sources */,
+				EDFCBF101DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift in Sources */,
 				EDFCBF021DE022D800168571 /* ExpertSignListViewController.swift in Sources */,
 				EDD06D5C1DDD90EB007AC1E8 /* AlertUtils.swift in Sources */,
 				EDFCBF061DE02B2600168571 /* ExpertSignUserCell.swift in Sources */,
@@ -623,10 +648,13 @@
 				EDFCBF011DE0060200168571 /* ArtSignPro.swift in Sources */,
 				ED7E32A01DDC05FA006780B7 /* DataUtils.swift in Sources */,
 				ED7E32AB1DDC0A8D006780B7 /* PayMethodResponse.swift in Sources */,
+				EDFCBF111DE18BAA00168571 /* ExpertSignDetailResponse.swift in Sources */,
 				ED7E32B51DDC0B66006780B7 /* ExpertSignListResponse.swift in Sources */,
 				EDD06D571DDD8B7D007AC1E8 /* PayResponse.swift in Sources */,
 				ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */,
 				EDD06D581DDD8B7D007AC1E8 /* PayResult.swift in Sources */,
+				EDFCBF191DE18E6000168571 /* ExpertSignImageCell.swift in Sources */,
+				EDFCBF121DE18BAA00168571 /* ExpertSignDetailResult.swift in Sources */,
 				ED7E32AC1DDC0A8D006780B7 /* PayMethodResult.swift in Sources */,
 				ED7E32B61DDC0B66006780B7 /* ExpertSignListResult.swift in Sources */,
 				EDD06D8D1DDDB4C1007AC1E8 /* PayBaseController.swift in Sources */,
