@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class ExpertSignListResult: NSObject, NSCoding {
+class ExpertSignListResult: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kExpertSignListResultTotalKey: String = "total"
@@ -17,9 +17,9 @@ open class ExpertSignListResult: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var total: Int?
-	open var userSigns: [ExpertSignListUserSigns]?
-	open var expertSigns: [ExpertSignListExpertSigns]?
+	var total: Int?
+	var userSigns: [ExpertSignListUserSigns]?
+	var expertSigns: [ExpertSignListExpertSigns]?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -63,7 +63,7 @@ open class ExpertSignListResult: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if total != nil {
@@ -95,7 +95,7 @@ open class ExpertSignListResult: NSObject, NSCoding {
 
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
 		aCoder.encode(total, forKey: kExpertSignListResultTotalKey)
 		aCoder.encode(userSigns, forKey: kExpertSignListResultUserSignsKey)
 		aCoder.encode(expertSigns, forKey: kExpertSignListResultExpertSignsKey)

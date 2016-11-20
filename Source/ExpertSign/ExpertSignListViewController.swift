@@ -9,12 +9,21 @@
 import UIKit
 import Alamofire
 
-class ExpertSignListViewController: PayBaseController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    @IBOutlet weak var retryView: UIButton!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UICollectionView!
+    
+    var expertSignListResponse:ExpertSignListResponse?
+    var selectUserSign:ExpertSignListUserSigns?
+    var selectExpertSign:ExpertSignListExpertSigns?
+    
+    var payMethod:PayMethodResponse?
+    var payMethodResult:PayMethodResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-        pay(self)
+        loadData(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,60 +42,102 @@ class ExpertSignListViewController: PayBaseController, UICollectionViewDataSourc
     }
     */
     
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if (expertSignListResponse?.result?.userSigns?.count)! > 0 {
+            if indexPath.row < (expertSignListResponse?.result?.userSigns?.count)! {
+                return CGSize(width: collectionView.frame.width,height: 160)
+            }else if indexPath.row == (expertSignListResponse?.result?.userSigns?.count)! {
+                return CGSize(width: collectionView.frame.width,height: 40)
+            }else{
+                return CGSize(width: collectionView.frame.width/2,height: collectionView.frame.width/2 + 50)
+            }
+        }else{
+            return CGSize(width: collectionView.frame.width/2,height: collectionView.frame.width/2 + 50)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 1
+        if expertSignListResponse == nil || expertSignListResponse?.result?.userSigns == nil || expertSignListResponse?.result?.expertSigns == nil {
+            return 0
+        }else if (expertSignListResponse?.result?.userSigns?.count)! > 0{
+            return (expertSignListResponse?.result?.userSigns?.count)! + (expertSignListResponse?.result?.expertSigns?.count)! + 1
+        }else{
+            return (expertSignListResponse?.result?.expertSigns?.count)!
+        }
     }
     
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCell", for: indexPath) as! ExpertSignListUserCell
-        return cell
+        if (expertSignListResponse?.result?.userSigns?.count)! > 0 {
+            if indexPath.row < (expertSignListResponse?.result?.userSigns?.count)! {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCell", for: indexPath) as! ExpertSignUserCell
+                cell.initCell(userSign: expertSignListResponse?.result?.userSigns?[indexPath.row], index:indexPath.row)
+                return cell
+            }else if indexPath.row == (expertSignListResponse?.result?.userSigns?.count)! {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DividerCell", for: indexPath)
+                return cell
+            }else{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath) as! ExpertSignExampleCell
+                if expertSignListResponse != nil && payMethodResult != nil {
+                    let index = (indexPath as NSIndexPath).row - 1  - (expertSignListResponse?.result?.userSigns?.count)!
+                    cell.initCell(expertSign: expertSignListResponse?.result?.expertSigns?[index], payMethodResult: payMethodResult)
+                }
+                return cell
+            }
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath) as! ExpertSignExampleCell
+            cell.initCell(expertSign: expertSignListResponse?.result?.expertSigns?[indexPath.row], payMethodResult: payMethodResult)
+            return cell
+        }
         
     }
     
-    // 下载用户的专家签数据
-    func loadData(){
-        // 获取支付方式
+    // get expert sign list
+    @IBAction func loadData(_ sender: AnyObject){
+        retryView.isHidden = true
+        indicatorView.startAnimating()
+        
         let payMethodParams = NetUtils.getBaseParams()
         Alamofire.request(PayMethodUrl, method: .post, parameters: payMethodParams).responseJSON(completionHandler: payMethodResponse)
-        // 获取签名数据
+        
         var params = NetUtils.getBaseParams()
         params["video"] = String(WithVideo)
         Alamofire.request(SignListUrl, method: .post, parameters: params).responseJSON(completionHandler:expertSignListResponse)
-//        indicatorView.startAnimating()
     }
     
-    // 获取支付方式回调
+    // get pay method response
     func payMethodResponse(response: DataResponse<Any>) -> Void {
-//        switch response.result {
-//        case .success(let value):
-//            payMethod = PayMethodResponse.init(object: value as AnyObject)
-//            if payMethod?.status?.code == Success {
-//                payMethodResult = payMethod?.result![0]
-//                self.listView.reloadData()
-//            }else{
-//                self.listView.makeToast(payMethod?.status?.descriptionValue)
-//            }
-//        case .failure(let error):
-//            print(error)
-//        }
+        switch response.result {
+        case .success(let value):
+            payMethod = PayMethodResponse.init(object: value as AnyObject)
+            if payMethod?.status?.code == Success {
+                payMethodResult = payMethod?.result![0]
+                self.tableView.reloadData()
+            }else{
+                self.tableView.makeToast((payMethod?.status?.descriptionValue)!)
+            }
+        case .failure:
+            retryView.isHidden = false
+        }
     }
     
-    // 获取专家签数据列表回调
+    // get expert sign list response
     func expertSignListResponse(response: DataResponse<Any>) -> Void {
         switch response.result {
         case .success(let value):
-            let _ = ExpertSignListResponse.init(object: value as AnyObject)
-//            if expertSignListResponse?.status?.code == Success {
-//                self.listView.reloadData()
-//            }else{
-//                self.listView.makeToast(expertSignListResponse?.status?.descriptionValue)
-//            }
-        case .failure(let error):
-            print(error)
+            expertSignListResponse = ExpertSignListResponse.init(object: value as AnyObject)
+            if expertSignListResponse?.status?.code == Success {
+                self.tableView.reloadData()
+            }else{
+                self.tableView.makeToast((expertSignListResponse?.status?.descriptionValue)!)
+            }
+        case .failure:
+            retryView.isHidden = false
         }
-//        indicatorView.stopAnimating()
+        indicatorView.stopAnimating()
     }
     
     // 支付
@@ -97,7 +148,7 @@ class ExpertSignListViewController: PayBaseController, UICollectionViewDataSourc
         params["sign_type"] = String(WithVideo)
         params["sign_user_name"] = "胡的胜"
         params["addition_content"] = ""
-        onPay("alipay", params: params, url: GetChargeUrl, productID: "1", updateStatusUrl: CheckReceiptUrl)
+//        onPay("alipay", params: params, url: GetChargeUrl, productID: "1", updateStatusUrl: CheckReceiptUrl)
 //        if SignName != nil && (SignName! =~ (expertSignDetailResponse?.result?.regular)!){
 //            var params = NetUtils.getBaseParams()
 //            params["channel"] = payMethodResult?.symbol!

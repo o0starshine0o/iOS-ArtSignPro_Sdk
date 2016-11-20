@@ -10,11 +10,7 @@ import UIKit
 import EZSwiftExtensions
 import CryptoSwift
 
-let Token = "Ym"
-
 let Success = "0"
-let WithoutVideo = 1
-let WithVideo = 2
 
 let LocalUrl = "http://192.168.1.115:10000/"
 let TestDomain = "http://sign.test.qima.tech/"
@@ -22,7 +18,14 @@ let TestPreviewDomain = "http://sign.preview.test.qima.tech/"
 let ProductionDomain = "http://sign.qima.tech/"
 let ProductionPreviewDomain = "http://sign.preview.qima.tech/"
 
-let Url = ProductionDomain
+var Url:String{
+    switch Environment{
+    case .Test:
+        return TestDomain
+    case .Production:
+        return ProductionDomain
+    }
+}
 
 let VerifyUrl = "\(Url)comm/send_verify_code/"
 let LoginUrl = "\(Url)comm/login/"
@@ -48,7 +51,7 @@ let PayMethodUrl = "\(Url)pay/get_usable_pay_method/"
 class NetUtils{
     
     class func getBaseParams() -> Dictionary<String, String>{
-        // 获取信息
+        // get base info
         let infoDictionary = Bundle.main.infoDictionary
         let majorVersion = infoDictionary!["CFBundleShortVersionString"]
         let appDisplayVersion = majorVersion as! String
@@ -58,16 +61,17 @@ class NetUtils{
         let model = UIDevice.deviceModelReadable()
         let time  =  String(Int64(Date().timeIntervalSince1970 * 1000))
         let user = DataUtils.getUserInfo()
-        let password = user.id + Token + time
+        let password = user.id + BusinessSecret + time
         let signature = password.md5()
-        // 生成参数
+        // create params
         var params = Dictionary<String, String>()
+        params["business_key"] = BusinessKey
         params["platform"] = "iOS"
         params["app_version"] = version
         params["phone_model"] = model
         params["phone_version"] = iosVersion
         params["timestamp"] = time
-        params["user_id"] = "7"
+        params["user_id"] = user.id
         params["signature"] = signature
         params["market"] = "AppStore"
         params["identify"] = identify
@@ -77,7 +81,7 @@ class NetUtils{
     class func refreshBaseParams(params:inout Dictionary<String, String>){
         let time  =  String(Int64(Date().timeIntervalSince1970 * 1000))
         let user = DataUtils.getUserInfo()
-        let password = user.id + Token + time
+        let password = user.id + BusinessSecret + time
         let signature = password.md5()
         params["timestamp"] = time
         params["user_id"] = user.id

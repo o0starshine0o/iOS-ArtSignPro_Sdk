@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class ExpertSignListResponse: NSObject, NSCoding {
+class ExpertSignListResponse: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kExpertSignListResponseStatusKey: String = "status"
@@ -16,8 +16,8 @@ open class ExpertSignListResponse: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var status: Status?
-	open var result: ExpertSignListResult?
+	var status: Status?
+	var result: ExpertSignListResult?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -26,7 +26,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
     - parameter object: The object of either Dictionary or Array kind that was passed.
     - returns: An initalized instance of the class.
     */
-    convenience public init(object: AnyObject) {
+    convenience init(object: AnyObject) {
         self.init(json: JSON(object))
     }
 
@@ -35,7 +35,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
     - parameter json: JSON object from SwiftyJSON.
     - returns: An initalized instance of the class.
     */
-    public init(json: JSON) {
+    init(json: JSON) {
 		status = Status(json: json[kExpertSignListResponseStatusKey])
 		result = ExpertSignListResult(json: json[kExpertSignListResponseResultKey])
 
@@ -46,7 +46,7 @@ open class ExpertSignListResponse: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if status != nil {
@@ -60,13 +60,13 @@ open class ExpertSignListResponse: NSObject, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
 		self.status = aDecoder.decodeObject(forKey: kExpertSignListResponseStatusKey) as? Status
 		self.result = aDecoder.decodeObject(forKey: kExpertSignListResponseResultKey) as? ExpertSignListResult
 
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
 		aCoder.encode(status, forKey: kExpertSignListResponseStatusKey)
 		aCoder.encode(result, forKey: kExpertSignListResponseResultKey)
 

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class ExpertSignListUserSigns: NSObject, NSCoding {
+class ExpertSignListUserSigns: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kExpertSignListUserSignsExpertSignSignNameKey: String = "expert_sign__sign_name"
@@ -36,28 +36,28 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var expertSignSignName: String?
-	open var additionVideoStatus: Int?
-    open var isAdditionVideo: Int?
-    open var createTime: String?
-    open var deadlineTime: String?
-    open var createTimeStamp: Int?
-    open var deadlineTimeStamp: Int?
-	open var signType: Int?
-	open var signStatus: Int?
-	open var userSignId: Int?
-	open var additionContent: String?
-	open var additionVideoContent: String?
-	open var signVideo: String?
-	open var signUserName: String?
-	open var videoUrl: String?
-	open var expertSign: Int?
-	open var signSource: String?
-	open var updateTime: String?
-	open var signImage: String?
-	open var user: Int?
-	open var imageUrl: String?
-	open var state: Int?
+	var expertSignSignName: String?
+	var additionVideoStatus: Int?
+    var isAdditionVideo: Int?
+    var createTime: String?
+    var deadlineTime: String?
+    var createTimeStamp: Int?
+    var deadlineTimeStamp: Int?
+	var signType: Int?
+	var signStatus: Int?
+	var userSignId: Int?
+	var additionContent: String?
+	var additionVideoContent: String?
+	var signVideo: String?
+	var signUserName: String?
+	var videoUrl: String?
+	var expertSign: Int?
+	var signSource: String?
+	var updateTime: String?
+	var signImage: String?
+	var user: Int?
+	var imageUrl: String?
+	var state: Int?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -66,7 +66,7 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
     - parameter object: The object of either Dictionary or Array kind that was passed.
     - returns: An initalized instance of the class.
     */
-    convenience public init(object: AnyObject) {
+    convenience init(object: AnyObject) {
         self.init(json: JSON(object))
     }
 
@@ -75,7 +75,7 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
     - parameter json: JSON object from SwiftyJSON.
     - returns: An initalized instance of the class.
     */
-    public init(json: JSON) {
+    init(json: JSON) {
 		expertSignSignName = json[kExpertSignListUserSignsExpertSignSignNameKey].string
 		additionVideoStatus = json[kExpertSignListUserSignsAdditionVideoStatusKey].int
         isAdditionVideo = json[kExpertSignListUserSignsIsAdditionVideoKey].int
@@ -105,7 +105,7 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if expertSignSignName != nil {
@@ -179,7 +179,7 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
 		self.expertSignSignName = aDecoder.decodeObject(forKey: kExpertSignListUserSignsExpertSignSignNameKey) as? String
 		self.additionVideoStatus = aDecoder.decodeObject(forKey: kExpertSignListUserSignsAdditionVideoStatusKey) as? Int
         self.isAdditionVideo = aDecoder.decodeObject(forKey: kExpertSignListUserSignsIsAdditionVideoKey) as? Int
@@ -205,7 +205,7 @@ open class ExpertSignListUserSigns: NSObject, NSCoding {
 
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
 		aCoder.encode(expertSignSignName, forKey: kExpertSignListUserSignsExpertSignSignNameKey)
 		aCoder.encode(additionVideoStatus, forKey: kExpertSignListUserSignsAdditionVideoStatusKey)
         aCoder.encode(isAdditionVideo, forKey: kExpertSignListUserSignsIsAdditionVideoKey)

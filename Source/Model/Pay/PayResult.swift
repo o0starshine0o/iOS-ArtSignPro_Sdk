@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class PayResult: NSObject, NSCoding {
+class PayResult: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
     internal let kPayResultChargeIdKey: String = "charge_id"
@@ -17,9 +17,9 @@ open class PayResult: NSObject, NSCoding {
 
 
     // MARK: Properties
-    open var chargeId: Int?
-    open var charge: Any?
-    open var payStatus:String?
+    var chargeId: Int?
+    var charge: Any?
+    var payStatus:String?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -28,7 +28,7 @@ open class PayResult: NSObject, NSCoding {
     - parameter object: The object of either Dictionary or Array kind that was passed.
     - returns: An initalized instance of the class.
     */
-    convenience public init(object: AnyObject) {
+    convenience init(object: AnyObject) {
         self.init(json: JSON(object))
     }
 
@@ -37,7 +37,7 @@ open class PayResult: NSObject, NSCoding {
     - parameter json: JSON object from SwiftyJSON.
     - returns: An initalized instance of the class.
     */
-    public init(json: JSON) {
+    init(json: JSON) {
         chargeId = json[kPayResultChargeIdKey].int
         charge = json[kPayResultChargeKey].object
         payStatus = json[kPayResultPayStatusKey].string
@@ -48,7 +48,7 @@ open class PayResult: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
         if chargeId != nil {
@@ -64,13 +64,13 @@ open class PayResult: NSObject, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         self.chargeId = aDecoder.decodeObject(forKey: kPayResultChargeIdKey) as? Int
         self.charge = aDecoder.decodeObject(forKey: kPayResultChargeKey)
         self.payStatus = aDecoder.decodeObject(forKey: kPayResultPayStatusKey) as? String
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
         aCoder.encode(chargeId, forKey: kPayResultChargeIdKey)
         aCoder.encode(charge, forKey: kPayResultChargeKey)
         aCoder.encode(payStatus, forKey: kPayResultPayStatusKey)

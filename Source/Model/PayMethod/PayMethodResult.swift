@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class PayMethodResult: NSObject, NSCoding {
+class PayMethodResult: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kPayMethodResultSymbolKey: String = "symbol"
@@ -20,12 +20,12 @@ open class PayMethodResult: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var symbol: String?
-	open var weight: Int?
-	open var buff: Float?
-	open var internalIdentifier: Int?
-	open var status: Int?
-	open var name: String?
+	var symbol: String?
+	var weight: Int?
+	var buff: Float?
+	var internalIdentifier: Int?
+	var status: Int?
+	var name: String?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -34,7 +34,7 @@ open class PayMethodResult: NSObject, NSCoding {
     - parameter object: The object of either Dictionary or Array kind that was passed.
     - returns: An initalized instance of the class.
     */
-    convenience public init(object: AnyObject) {
+    convenience init(object: AnyObject) {
         self.init(json: JSON(object))
     }
 
@@ -43,7 +43,7 @@ open class PayMethodResult: NSObject, NSCoding {
     - parameter json: JSON object from SwiftyJSON.
     - returns: An initalized instance of the class.
     */
-    public init(json: JSON) {
+    init(json: JSON) {
 		symbol = json[kPayMethodResultSymbolKey].string
 		weight = json[kPayMethodResultWeightKey].int
 		buff = json[kPayMethodResultBuffKey].float
@@ -58,7 +58,7 @@ open class PayMethodResult: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if symbol != nil {
@@ -84,7 +84,7 @@ open class PayMethodResult: NSObject, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
 		self.symbol = aDecoder.decodeObject(forKey: kPayMethodResultSymbolKey) as? String
 		self.weight = aDecoder.decodeObject(forKey: kPayMethodResultWeightKey) as? Int
 		self.buff = aDecoder.decodeObject(forKey: kPayMethodResultBuffKey) as? Float
@@ -94,7 +94,7 @@ open class PayMethodResult: NSObject, NSCoding {
 
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
 		aCoder.encode(symbol, forKey: kPayMethodResultSymbolKey)
 		aCoder.encode(weight, forKey: kPayMethodResultWeightKey)
 		aCoder.encode(buff, forKey: kPayMethodResultBuffKey)

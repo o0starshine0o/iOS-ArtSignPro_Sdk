@@ -8,6 +8,20 @@
 
 import Foundation
 
+let OnDesign = 1
+let CompleteDesign = 2
+let WithoutVideo = 1
+let WithVideo = 2
+let ChargeStatus_ToDesign = 2
+let ChargeStatus_HavePushed = 3
+let ChargeStatus_ToRecord = 4
+let ChargeStatus_Complete = 5
+
+// 54B0FE
+let BaseBule = UIColor.init(red: 84/255, green: 176/255, blue: 254/255, alpha: 1)
+// ace03c
+let BaseGreen = UIColor.init(red: 172/255, green: 224/255, blue: 60/255, alpha: 1)
+
 class DataUtils{
     
     class func login(id:String, name:String, phone:String){

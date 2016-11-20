@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-open class ExpertSignListExpertSigns: NSObject, NSCoding {
+class ExpertSignListExpertSigns: NSObject, NSCoding {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kExpertSignListExpertSignsSignDesignerDesignerNameKey: String = "sign_designer__designer_name"
@@ -36,28 +36,28 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
 
 
     // MARK: Properties
-	open var signDesignerDesignerName: String?
-	open var price: Int?
-	open var videoIntroduction: String?
-	open var preferential: Int?
-	open var videoPrice: Int?
-	open var signImgUrl: String?
-	open var signDesigner: Int?
-	open var detailsDesignImg1: String?
-	open var regular: String?
-	open var delayTime: Int?
-	open var designPrice: Int?
-	open var isDesign: Int?
-	open var detailsDesignImg3: String?
-	open var iosProductPayId: String?
-	open var expertSignId: Int?
-	open var detailsDesignImg2: String?
-	open var videoUrl: String?
-	open var iosPrice: Int?
-	open var signName: String?
-	open var imageUrl: String?
-	open var isVideo: Int?
-	open var state: Int?
+	var signDesignerDesignerName: String?
+	var price: Int?
+    var videoIntroduction: String?
+	var preferential: Int?
+	var videoPrice: Int?
+	var signImgUrl: String?
+	var signDesigner: Int?
+	var detailsDesignImg1: String?
+	var regular: String?
+	var delayTime: Int?
+	var designPrice: Int?
+	var isDesign: Int?
+	var detailsDesignImg3: String?
+	var iosProductPayId: String?
+	var expertSignId: Int?
+	var detailsDesignImg2: String?
+	var videoUrl: String?
+	var iosPrice: Int?
+	var signName: String?
+	var imageUrl: String?
+	var isVideo: Int?
+	var state: Int?
 
 
     // MARK: SwiftyJSON Initalizers
@@ -66,7 +66,7 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
     - parameter object: The object of either Dictionary or Array kind that was passed.
     - returns: An initalized instance of the class.
     */
-    convenience public init(object: AnyObject) {
+    convenience init(object: AnyObject) {
         self.init(json: JSON(object))
     }
 
@@ -75,7 +75,7 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
     - parameter json: JSON object from SwiftyJSON.
     - returns: An initalized instance of the class.
     */
-    public init(json: JSON) {
+    init(json: JSON) {
 		signDesignerDesignerName = json[kExpertSignListExpertSignsSignDesignerDesignerNameKey].string
 		price = json[kExpertSignListExpertSignsPriceKey].int
 		videoIntroduction = json[kExpertSignListExpertSignsVideoIntroductionKey].string
@@ -106,7 +106,7 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
     Generates description of the object in the form of a NSDictionary.
     - returns: A Key value pair containing all valid values in the object.
     */
-    open func dictionaryRepresentation() -> [String : AnyObject ] {
+    func dictionaryRepresentation() -> [String : AnyObject ] {
 
         var dictionary: [String : AnyObject ] = [ : ]
 		if signDesignerDesignerName != nil {
@@ -180,7 +180,7 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
 		self.signDesignerDesignerName = aDecoder.decodeObject(forKey: kExpertSignListExpertSignsSignDesignerDesignerNameKey) as? String
 		self.price = aDecoder.decodeObject(forKey: kExpertSignListExpertSignsPriceKey) as? Int
 		self.videoIntroduction = aDecoder.decodeObject(forKey: kExpertSignListExpertSignsVideoIntroductionKey) as? String
@@ -206,7 +206,7 @@ open class ExpertSignListExpertSigns: NSObject, NSCoding {
 
     }
 
-    open func encode(with aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
 		aCoder.encode(signDesignerDesignerName, forKey: kExpertSignListExpertSignsSignDesignerDesignerNameKey)
 		aCoder.encode(price, forKey: kExpertSignListExpertSignsPriceKey)
 		aCoder.encode(videoIntroduction, forKey: kExpertSignListExpertSignsVideoIntroductionKey)
