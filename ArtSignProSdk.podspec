@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
     spec.dependency            'CryptoSwift'
     spec.dependency            'SwiftSpinner'
     spec.dependency            'Toast-Swift'
+    spec.dependency            'M13Checkbox'
 
     spec.source              = { :git => 'https://github.com/o0starshine0o/iOS-ArtSignPro_Sdk.git', :tag => "v#{spec.version}" }
     spec.default_subspec     = 'Core', 'Pay', 'Alipay', 'WeChat'

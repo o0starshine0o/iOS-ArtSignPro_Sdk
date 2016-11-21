@@ -79,4 +79,11 @@ class DataUtils{
         let regextestCode = NSPredicate(format: "SELF MATCHES %@",authCode)
         return regextestCode.evaluate(with: name)
     }
+    
+    class func schemeAvailable(scheme: String) -> Bool {
+        if let url = URL.init(string: scheme) {
+            return UIApplication.shared.canOpenURL(url)
+        }
+        return false
+    }
 }

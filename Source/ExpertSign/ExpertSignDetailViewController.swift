@@ -36,10 +36,10 @@ class ExpertSignDetailViewController: UIViewController, UITableViewDataSource, U
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-//        case "ShowPay":
-//            let viewController = segue.destination as! SignDetailPayViewController
-//            viewController.expertId = expertId!
-//            viewController.productId = productId!
+        case "ShowExpertSignPay":
+            let viewController = segue.destination as! ExpertSignPayViewController
+            viewController.expertId = expertId!
+            viewController.productId = productId!
 //        case "ShowVideo":
 //            let viewController = segue.destination as! VideoViewController
 //            viewController.videoUrl = expertSignDetailResponse?.result?.videoUrl

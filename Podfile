@@ -18,6 +18,8 @@ target "ArtSignProSdk" do
     pod 'SwiftSpinner'
     # toast
     pod 'Toast-Swift'
+    # checkbox
+    pod 'M13Checkbox'
 end
 
 target "ArtSignProSdkTests" do
