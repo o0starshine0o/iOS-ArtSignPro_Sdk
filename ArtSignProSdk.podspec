@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Core' do |core|
         core.source_files='Source/**/*.swift'
-        core.resource='Resources/**/*.{storyboard,string}'
+        core.resource='Resources/**/*.*'
     end
 
     spec.subspec 'Pay' do |pay|

@@ -9,7 +9,8 @@
 import UIKit
 import Alamofire
 
-class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ExpertSignListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ExpertSignListUserCellDelegate {
+    @IBOutlet weak var loginView: UIButton!
     @IBOutlet weak var retryView: UIButton!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UICollectionView!
@@ -25,6 +26,13 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         loadData(self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // if user has logined , hidden the login button
+        if DataUtils.isLogin(){
+            navigationItem.rightBarButtonItem = nil
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,19 +43,16 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
         if sender is ExpertSignExampleCell {
             let cell = sender as! ExpertSignExampleCell
             selectExpertSign = cell.expertSign
-        }else if sender is UIButton {
-            let button = sender as! UIButton
-            selectUserSign = expertSignListResponse?.result?.userSigns?[button.tag]
         }
         
         switch segue.identifier! {
-//        case "ShowVideo":
-//            let viewController = segue.destination as! VideoViewController
-//            viewController.videoUrl = selectUserSign?.videoUrl
-//        case "ShowImitate":
-//            let viewController = segue.destination as! ImitateViewController
-//            viewController.onSegueBackID = "SignListBack"
-//            viewController.imageUrl = selectUserSign?.imageUrl
+        case "ShowVideo":
+            let viewController = segue.destination as! VideoViewController
+            viewController.videoUrl = selectUserSign?.videoUrl
+        case "ShowImitate":
+            let viewController = segue.destination as! ImitateViewController
+            viewController.backViewControllerID = "ExpertSignListViewController"
+            viewController.imageUrl = selectUserSign?.imageUrl
         case "ShowExpertSignDetail":
             let viewController = segue.destination as! ExpertSignDetailViewController
             viewController.expertId = String((selectExpertSign?.expertSignId)!)
@@ -55,6 +60,10 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
         default:
             break
         }
+    }
+    
+    // return to this controller
+    @IBAction func toExpertSignList(segue: UIStoryboardSegue) {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
@@ -87,7 +96,7 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
         if (expertSignListResponse?.result?.userSigns?.count)! > 0 {
             if indexPath.row < (expertSignListResponse?.result?.userSigns?.count)! {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCell", for: indexPath) as! ExpertSignUserCell
-                cell.initCell(userSign: expertSignListResponse?.result?.userSigns?[indexPath.row], index:indexPath.row)
+                cell.initCell(delegate: self, userSign: expertSignListResponse?.result?.userSigns?[indexPath.row], index:indexPath.row)
                 return cell
             }else if indexPath.row == (expertSignListResponse?.result?.userSigns?.count)! {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DividerCell", for: indexPath)
@@ -151,6 +160,15 @@ class ExpertSignListViewController: UIViewController, UICollectionViewDataSource
             retryView.isHidden = false
         }
         indicatorView.stopAnimating()
+    }
+    
+    // ExpertSignListUserCellDelegate
+    func onVideoClick(userSign:ExpertSignListUserSigns?){
+        selectUserSign = userSign
+    }
+    // ExpertSignListUserCellDelegate
+    func onImitateClick(userSign:ExpertSignListUserSigns?){
+        selectUserSign = userSign
     }
     
     // 支付

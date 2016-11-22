@@ -38,6 +38,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
         switch segue.identifier! {
         case "ShowPayMethod":
             let viewController = segue.destination as! PayMethodViewController
+            viewController.backViewControllerID = "ExpertSignPayViewController"
             viewController.methods = payMethod?.result
 //        case "ShowLoginView":
 //            let viewController = segue.destination as! LoginViewController
@@ -47,17 +48,15 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
         }
     }
     
-    // 从选择支付方式返回本viewController
-    @IBAction func onPayMethodReturn(_ segue: UIStoryboardSegue) {
-        // 获取选中的支付方式
-        payMethodResult = (segue.source as! PayMethodViewController).selectMethod
-        self.tableView.reloadData()
-        updatePrice()
+    // return to this controller
+    @IBAction func toExpertSignPay(segue: UIStoryboardSegue) {
+        if segue.source is PayMethodViewController {
+            payMethodResult = (segue.source as! PayMethodViewController).selectMethod
+            tableView.reloadData()
+            updatePrice()
+        }
     }
-    // 从登陆界面返回
-    @IBAction func onExpertSignPayLoginReturn(_ segue: UIStoryboardSegue) {
-        pay(self)
-    }
+    
     @IBAction func pay(_ sender: AnyObject) {
         if name != nil && (name! =~ (expertSignDetailResponse?.result?.regular)!){
             var params = NetUtils.getBaseParams()

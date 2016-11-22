@@ -23,13 +23,12 @@ var EnableLog:Bool = false
 public func initArtSignPro(key:String, secret:String){
     BusinessKey = key
     BusinessSecret = secret
+    // temp
+//    DataUtils.logout()
+    DataUtils.login(id:"7", name:"胡永胜", phone:"13018019891")
 }
 
 public func setEnvironment(environment:EnvironmentType){
     Environment = environment
-}
-
-public func login(){
-    DataUtils.login(id:"7", name:"胡永胜", phone:"13018019891")
 }
 

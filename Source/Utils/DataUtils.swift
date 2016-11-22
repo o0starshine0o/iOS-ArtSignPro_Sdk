@@ -87,3 +87,12 @@ class DataUtils{
         return false
     }
 }
+
+extension String {
+    var localized: String {
+        let infoDictionary = Bundle.init(for: DataUtils.self).infoDictionary
+        let identify = infoDictionary!["CFBundleIdentifier"] as! String
+        let bundle = Bundle(identifier: identify)
+        return NSLocalizedString(self, tableName: "ArtSignProLocalizable", bundle: bundle!, value: "", comment: "")
+    }
+}

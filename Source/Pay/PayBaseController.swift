@@ -35,7 +35,7 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     }
     
     // 返回到本viewController
-    @IBAction func onPayBaseReturn(_ unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+    @IBAction func onPayBaseReturn(unwindSegue: UIStoryboardSegue, viewController: UIViewController) {
         if unwindSegue.identifier != nil {
             switch unwindSegue.identifier! {
             case "PayBaseLoginBack":

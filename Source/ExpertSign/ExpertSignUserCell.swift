@@ -9,18 +9,25 @@
 import UIKit
 import Kingfisher
 
+protocol ExpertSignListUserCellDelegate : NSObjectProtocol {
+    func onVideoClick(userSign:ExpertSignListUserSigns?)
+    func onImitateClick(userSign:ExpertSignListUserSigns?)
+}
+
 class ExpertSignUserCell: UICollectionViewCell {
     
-    @IBOutlet var imagePreview: UIImageView!
-    @IBOutlet var nameView: UILabel!
+    @IBOutlet weak var imagePreview: UIImageView!
+    @IBOutlet weak var nameView: UILabel!
     @IBOutlet weak var deadlineView: UILabel!
-    @IBOutlet var rightView: UILabel!
+    @IBOutlet weak var rightView: UILabel!
     @IBOutlet weak var videoButton: UIButton!
     @IBOutlet weak var imitateButton: UIButton!
     
+    var delegate:ExpertSignListUserCellDelegate?
     var userSign:ExpertSignListUserSigns?
     
-    func initCell(userSign:ExpertSignListUserSigns?, index:Int) {
+    func initCell(delegate:ExpertSignListUserCellDelegate?, userSign:ExpertSignListUserSigns?, index:Int) {
+        self.delegate = delegate
         self.userSign = userSign
         imagePreview.kf.setImage(with: URL(string:(userSign?.imageUrl)!), placeholder: DefaultImage)
         nameView.text = userSign?.expertSignSignName
@@ -32,8 +39,10 @@ class ExpertSignUserCell: UICollectionViewCell {
         }else{
             let deadlineStamp = TimeInterval((userSign?.deadlineTimeStamp)!)
             let format = DateFormatter()
-            format.dateFormat = "MM月dd日HH:mm"
-            deadlineView.text = "\(format.string(from: Date(timeIntervalSince1970: deadlineStamp)))前完成"
+            format.dateFormat = "deadline_format".localized
+            print("deadline_format".localized)
+//            deadlineView.text = "\(format.string(from: Date(timeIntervalSince1970: deadlineStamp)))前完成"
+            deadlineView.text = String(format: "complete before %@".localized, format.string(from: Date(timeIntervalSince1970: deadlineStamp)))
         }
         if (userSign?.imageUrl?.isEmpty)! {
             imitateButton.backgroundColor = UIColor.lightGray
@@ -46,10 +55,20 @@ class ExpertSignUserCell: UICollectionViewCell {
         }
         if (userSign?.videoUrl?.isEmpty)! {
             videoButton.backgroundColor = UIColor.lightGray
+            videoButton.setTitle("设计中···", for: UIControlState())
             videoButton.isEnabled = false
         }else{
             videoButton.backgroundColor = BaseBule
+            videoButton.setTitle("观看视频", for: UIControlState())
             videoButton.isEnabled = true
         }
+    }
+    
+    @IBAction func onVideoClick(_ sender:UIButton){
+        delegate?.onVideoClick(userSign: userSign)
+    }
+    
+    @IBAction func onImitateClick(_ sender:UIButton){
+        delegate?.onImitateClick(userSign: userSign)
     }
 }

@@ -1,5 +1,120 @@
 
-"lTY-Rm-WhG.text" = "签名类型";
-"yus-Df-eGI.text" = "姓名";
-"tyJ-UJ-YhB.text" = "功能0";
-"pc3-lD-BsX.text" = "功能1";
+/* Class = "UILabel"; text = "Method"; ObjectID = "4bh-4G-Nb0"; */
+"4bh-4G-Nb0.text" = "Method";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "65D-gd-079"; */
+"65D-gd-079.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "验证码"; ObjectID = "6re-nR-rt4"; */
+"6re-nR-rt4.placeholder" = "验证码";
+
+/* Class = "UIButton"; normalTitle = "Design"; ObjectID = "7Gc-XK-AlK"; */
+"7Gc-XK-AlK.normalTitle" = "Design";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "9MP-GX-pSR"; */
+"9MP-GX-pSR.text" = "*";
+
+/* Class = "UILabel"; text = "亲，注册后我们将会为您终身保存签名的相关资料"; ObjectID = "9dc-Xp-T01"; */
+"9dc-Xp-T01.text" = "亲，注册后我们将会为您终身保存签名的相关资料";
+
+/* Class = "UIButton"; normalTitle = "开始签名"; ObjectID = "9pP-A7-e6K"; */
+"9pP-A7-e6K.normalTitle" = "开始签名";
+
+/* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "BW4-PB-72t"; */
+"BW4-PB-72t.normalTitle" = "Pay";
+
+/* Class = "UILabel"; text = "Draft"; ObjectID = "Cxl-QH-zbo"; */
+"Cxl-QH-zbo.text" = "Draft";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "HJi-gc-e7q"; */
+"HJi-gc-e7q.text" = "Time";
+
+/* Class = "UILabel"; text = "Deadline"; ObjectID = "IG1-pC-w0c"; */
+"IG1-pC-w0c.text" = "Deadline";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "JM0-Fl-Oqa"; */
+"JM0-Fl-Oqa.text" = "Time";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nqe-Th-XOU"; */
+"Nqe-Th-XOU.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "O9N-p7-tKb"; */
+"O9N-p7-tKb.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Total:"; ObjectID = "Tcs-tE-HkU"; */
+"Tcs-tE-HkU.text" = "Total:";
+
+/* Class = "UILabel"; text = "method"; ObjectID = "UdA-kA-rOD"; */
+"UdA-kA-rOD.text" = "method";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "VR9-mW-bHM"; */
+"VR9-mW-bHM.text" = "Request";
+
+/* Class = "UITextView"; text = "If you have any extra requests , please tell me."; ObjectID = "Xhb-1n-p8f"; */
+"Xhb-1n-p8f.text" = "If you have any extra requests , please tell me.";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "azA-ww-oAN"; */
+"azA-ww-oAN.text" = "Price";
+
+/* Class = "UINavigationItem"; title = "Sign List"; ObjectID = "d7P-cn-kAG"; */
+"d7P-cn-kAG.title" = "Sign List";
+
+/* Class = "UIButton"; normalTitle = "Retry"; ObjectID = "dRA-1O-zW3"; */
+"dRA-1O-zW3.normalTitle" = "Retry";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "eVN-AU-qTg"; */
+"eVN-AU-qTg.text" = "$0.00";
+
+/* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "eY6-xa-0LE"; */
+"eY6-xa-0LE.normalTitle" = "获取验证码";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "fbQ-7e-YY0"; */
+"fbQ-7e-YY0.text" = "$0.00";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "g1t-fe-Kl9"; */
+"g1t-fe-Kl9.text" = "Label";
+
+/* Class = "UILabel"; text = "Sign"; ObjectID = "gE1-J1-bdw"; */
+"gE1-J1-bdw.text" = "Sign";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i3Y-PQ-Gxs"; */
+"i3Y-PQ-Gxs.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "(Benefit:0.00)"; ObjectID = "ioy-WA-OtU"; */
+"ioy-WA-OtU.text" = "(Benefit:0.00)";
+
+/* Class = "UILabel"; text = "------------ Sign List ------------"; ObjectID = "jt3-Sf-3GF"; */
+"jt3-Sf-3GF.text" = "------------ Sign List ------------";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "k7L-So-XGP"; */
+"k7L-So-XGP.text" = "Label";
+
+/* Class = "UILabel"; text = "Video"; ObjectID = "l6B-Ce-jgU"; */
+"l6B-Ce-jgU.text" = "Video";
+
+/* Class = "UILabel"; text = "SignName"; ObjectID = "lTY-Rm-WhG"; */
+"lTY-Rm-WhG.text" = "SignName";
+
+/* Class = "UIButton"; normalTitle = "Imitate"; ObjectID = "pc3-lD-BsX"; */
+"pc3-lD-BsX.normalTitle" = "Imitate";
+
+/* Class = "UITextField"; placeholder = "请输入您的手机号"; ObjectID = "sbE-VE-Hf1"; */
+"sbE-VE-Hf1.placeholder" = "请输入您的手机号";
+
+/* Class = "UIButton"; normalTitle = "Watch"; ObjectID = "tyJ-UJ-YhB"; */
+"tyJ-UJ-YhB.normalTitle" = "Watch";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "xfE-Su-1RR"; */
+"xfE-Su-1RR.text" = "Type";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "yma-cr-mTm"; */
+"yma-cr-mTm.text" = "Title";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "yus-Df-eGI"; */
+"yus-Df-eGI.text" = "Name";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "zbP-BC-NMk"; */
+"zbP-BC-NMk.text" = "Description";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "zfH-WA-RXG"; */
+"zfH-WA-RXG.text" = "Result";

@@ -40,9 +40,9 @@ class ExpertSignDetailViewController: UIViewController, UITableViewDataSource, U
             let viewController = segue.destination as! ExpertSignPayViewController
             viewController.expertId = expertId!
             viewController.productId = productId!
-//        case "ShowVideo":
-//            let viewController = segue.destination as! VideoViewController
-//            viewController.videoUrl = expertSignDetailResponse?.result?.videoUrl
+        case "ShowVideo":
+            let viewController = segue.destination as! VideoViewController
+            viewController.videoUrl = expertSignDetailResponse?.result?.videoUrl
         default:
             break
         }

@@ -10,6 +10,7 @@
 		0018F20EF46C99D3C7AF3027 /* Pods_ArtSignProSdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */; };
 		473EB5EFD696A4489A75B2FD /* Pods_ArtSignProSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1617C89FE481F67F9E251C8 /* Pods_ArtSignProSdk.framework */; };
 		ED02862C1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = ED02862B1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h */; };
+		ED4E5E071DE45BD8002DE374 /* ArtSignProLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4E5E091DE45BD8002DE374 /* ArtSignProLocalizable.strings */; };
 		ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */; };
 		ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */; };
 		ED7E328F1DDC00BC006780B7 /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E328E1DDC00BC006780B7 /* NetUtils.swift */; };
@@ -47,6 +48,12 @@
 		EDD06D8B1DDDAD8D007AC1E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D8A1DDDAD8D007AC1E8 /* SystemConfiguration.framework */; };
 		EDD06D8D1DDDB4C1007AC1E8 /* PayBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD06D4D1DDD8A16007AC1E8 /* PayBaseController.swift */; };
 		EDD06D8F1DDDB7B1007AC1E8 /* libpingppcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD06D8E1DDDB7B1007AC1E8 /* libpingppcore.a */; };
+		EDDAA0E61DE3F219005B166A /* BrushBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF3D1DE2EEA800168571 /* BrushBoard.swift */; };
+		EDDAA0E81DE3F749005B166A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDAA0E71DE3F749005B166A /* Images.xcassets */; };
+		EDDAA0EA1DE3FB89005B166A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAA0E91DE3FB89005B166A /* LoginViewController.swift */; };
+		EDDAA0EE1DE3FCEA005B166A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAA0EC1DE3FCEA005B166A /* LoginResponse.swift */; };
+		EDDAA0EF1DE3FCEA005B166A /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAA0ED1DE3FCEA005B166A /* LoginResult.swift */; };
+		EDDAA0F91DE43222005B166A /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAA0F81DE43222005B166A /* ViewUtils.swift */; };
 		EDFCBF011DE0060200168571 /* ArtSignPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF001DE0060200168571 /* ArtSignPro.swift */; };
 		EDFCBF021DE022D800168571 /* ExpertSignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */; };
 		EDFCBF051DE02B2600168571 /* ExpertSignExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF031DE02B2600168571 /* ExpertSignExampleCell.swift */; };
@@ -66,6 +73,8 @@
 		EDFCBF351DE2AE5600168571 /* ExpertSignPayTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF2A1DE2ACC400168571 /* ExpertSignPayTimeCell.swift */; };
 		EDFCBF361DE2AE8E00168571 /* ExpertSignPayNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF261DE2ACC400168571 /* ExpertSignPayNameCell.swift */; };
 		EDFCBF371DE2CC2200168571 /* ExpertSignPayExtraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF271DE2ACC400168571 /* ExpertSignPayExtraCell.swift */; };
+		EDFCBF3B1DE2ECAC00168571 /* ImitateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF391DE2ECAC00168571 /* ImitateViewController.swift */; };
+		EDFCBF3C1DE2ECAC00168571 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCBF3A1DE2ECAC00168571 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +97,11 @@
 		B870707655320090B9AF2FA7 /* Pods-ArtSignProSdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSignProSdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtSignProSdkTests/Pods-ArtSignProSdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSignProSdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED02862B1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArtSignProSdk-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED4E5E081DE45BD8002DE374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ArtSignProLocalizable.strings; sourceTree = "<group>"; };
+		ED4E5E0A1DE45BD9002DE374 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ArtSignProLocalizable.strings; sourceTree = "<group>"; };
+		ED4E5E0B1DE45BDA002DE374 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignProLocalizable.strings"; sourceTree = "<group>"; };
+		ED4E5E0D1DE45C23002DE374 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ArtSignPro.strings; sourceTree = "<group>"; };
+		ED4E5E0F1DE45C27002DE374 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.strings"; sourceTree = "<group>"; };
 		ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArtSignProSdk.podspec; sourceTree = "<group>"; };
 		ED62F32A1DDB054500AB8BA5 /* ExpertSignListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListViewController.swift; sourceTree = "<group>"; };
 		ED62F3351DDB21E100AB8BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArtSignPro.storyboard; sourceTree = "<group>"; };
@@ -103,7 +117,6 @@
 		ED7E32B01DDC0B66006780B7 /* ExpertSignListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListResponse.swift; sourceTree = "<group>"; };
 		ED7E32B11DDC0B66006780B7 /* ExpertSignListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListResult.swift; sourceTree = "<group>"; };
 		ED7E32B31DDC0B66006780B7 /* ExpertSignListUserSigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignListUserSigns.swift; sourceTree = "<group>"; };
-		EDD06D491DDD53FF007AC1E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignPro.strings"; sourceTree = "<group>"; };
 		EDD06D4D1DDD8A16007AC1E8 /* PayBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayBaseController.swift; sourceTree = "<group>"; };
 		EDD06D501DDD8B7D007AC1E8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		EDD06D511DDD8B7D007AC1E8 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -131,6 +144,11 @@
 		EDD06D8E1DDDB7B1007AC1E8 /* libpingppcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingppcore.a; sourceTree = "<group>"; };
 		EDD5AB601DD973610035696E /* ArtSignProSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtSignProSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5AB641DD973610035696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDAA0E71DE3F749005B166A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EDDAA0E91DE3FB89005B166A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDDAA0EC1DE3FCEA005B166A /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EDDAA0ED1DE3FCEA005B166A /* LoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		EDDAA0F81DE43222005B166A /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		EDFCBF001DE0060200168571 /* ArtSignPro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtSignPro.swift; path = Source/ArtSignPro.swift; sourceTree = SOURCE_ROOT; };
 		EDFCBF031DE02B2600168571 /* ExpertSignExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignExampleCell.swift; sourceTree = "<group>"; };
 		EDFCBF041DE02B2600168571 /* ExpertSignUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignUserCell.swift; sourceTree = "<group>"; };
@@ -149,6 +167,9 @@
 		EDFCBF281DE2ACC400168571 /* ExpertSignPayResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignPayResultCell.swift; sourceTree = "<group>"; };
 		EDFCBF291DE2ACC400168571 /* ExpertSignPayShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignPayShowCell.swift; sourceTree = "<group>"; };
 		EDFCBF2A1DE2ACC400168571 /* ExpertSignPayTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpertSignPayTimeCell.swift; sourceTree = "<group>"; };
+		EDFCBF391DE2ECAC00168571 /* ImitateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImitateViewController.swift; sourceTree = "<group>"; };
+		EDFCBF3A1DE2ECAC00168571 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		EDFCBF3D1DE2EEA800168571 /* BrushBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushBoard.swift; sourceTree = "<group>"; };
 		F858844686F3F9314C065526 /* Pods_ArithmeticTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArithmeticTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */,
+				EDDAA0E71DE3F749005B166A /* Images.xcassets */,
+				ED4E5E091DE45BD8002DE374 /* ArtSignProLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -263,6 +286,7 @@
 				ED7E328E1DDC00BC006780B7 /* NetUtils.swift */,
 				ED7E329F1DDC05FA006780B7 /* DataUtils.swift */,
 				EDFCBF231DE2ABE800168571 /* OperatorUtils.swift */,
+				EDDAA0F81DE43222005B166A /* ViewUtils.swift */,
 			);
 			name = Utils;
 			path = Source/Utils;
@@ -280,6 +304,7 @@
 		ED7E32A61DDC0A54006780B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDDAA0EB1DE3FCEA005B166A /* Login */,
 				EDFCBF0B1DE18BAA00168571 /* ExpertSignDetail */,
 				EDD06D4F1DDD8B7D007AC1E8 /* Common */,
 				EDD06D521DDD8B7D007AC1E8 /* Pay */,
@@ -432,6 +457,7 @@
 		EDD5AB621DD973610035696E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EDFCBF381DE2EC7C00168571 /* Widget */,
 				EDD06D4C1DDD89FB007AC1E8 /* Pay */,
 				ED7E32A61DDC0A54006780B7 /* Model */,
 				ED7E328D1DDC00A5006780B7 /* Utils */,
@@ -440,6 +466,15 @@
 			);
 			name = Source;
 			path = "ArtSignPro-Sdk";
+			sourceTree = "<group>";
+		};
+		EDDAA0EB1DE3FCEA005B166A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EDDAA0EC1DE3FCEA005B166A /* LoginResponse.swift */,
+				EDDAA0ED1DE3FCEA005B166A /* LoginResult.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		EDFCBF0B1DE18BAA00168571 /* ExpertSignDetail */ = {
@@ -451,6 +486,18 @@
 			);
 			path = ExpertSignDetail;
 			sourceTree = "<group>";
+		};
+		EDFCBF381DE2EC7C00168571 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				EDDAA0E91DE3FB89005B166A /* LoginViewController.swift */,
+				EDFCBF3D1DE2EEA800168571 /* BrushBoard.swift */,
+				EDFCBF391DE2ECAC00168571 /* ImitateViewController.swift */,
+				EDFCBF3A1DE2ECAC00168571 /* VideoViewController.swift */,
+			);
+			name = Widget;
+			path = Source/Widget;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -564,7 +611,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4E5E071DE45BD8002DE374 /* ArtSignProLocalizable.strings in Resources */,
 				EDD06D6C1DDDA5DD007AC1E8 /* AlipaySDK.bundle in Resources */,
+				EDDAA0E81DE3F749005B166A /* Images.xcassets in Resources */,
 				ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */,
 				ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */,
 				EDD06D721DDDA5DE007AC1E8 /* Pingpp.bundle in Resources */,
@@ -664,8 +713,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDAA0E61DE3F219005B166A /* BrushBoard.swift in Sources */,
 				EDFCBF371DE2CC2200168571 /* ExpertSignPayExtraCell.swift in Sources */,
 				EDFCBF361DE2AE8E00168571 /* ExpertSignPayNameCell.swift in Sources */,
+				EDFCBF3C1DE2ECAC00168571 /* VideoViewController.swift in Sources */,
+				EDDAA0EA1DE3FB89005B166A /* LoginViewController.swift in Sources */,
 				EDFCBF311DE2AE5600168571 /* ExpertSignPayMethodCell.swift in Sources */,
 				EDFCBF331DE2AE5600168571 /* ExpertSignPayResultCell.swift in Sources */,
 				EDFCBF341DE2AE5600168571 /* ExpertSignPayShowCell.swift in Sources */,
@@ -673,10 +725,12 @@
 				EDFCBF1C1DE196B000168571 /* ExpertSignDetailViewController.swift in Sources */,
 				EDFCBF101DE18BAA00168571 /* ExpertSignDetailDetailsDesignImage.swift in Sources */,
 				EDFCBF021DE022D800168571 /* ExpertSignListViewController.swift in Sources */,
+				EDDAA0EF1DE3FCEA005B166A /* LoginResult.swift in Sources */,
 				EDFCBF241DE2ABE800168571 /* OperatorUtils.swift in Sources */,
 				EDD06D5C1DDD90EB007AC1E8 /* AlertUtils.swift in Sources */,
 				EDFCBF061DE02B2600168571 /* ExpertSignUserCell.swift in Sources */,
 				ED7E32B81DDC0B66006780B7 /* ExpertSignListUserSigns.swift in Sources */,
+				EDFCBF3B1DE2ECAC00168571 /* ImitateViewController.swift in Sources */,
 				EDD06D551DDD8B7D007AC1E8 /* Response.swift in Sources */,
 				EDD06D561DDD8B7D007AC1E8 /* Status.swift in Sources */,
 				ED7E328F1DDC00BC006780B7 /* NetUtils.swift in Sources */,
@@ -689,9 +743,11 @@
 				ED7E32AB1DDC0A8D006780B7 /* PayMethodResponse.swift in Sources */,
 				EDFCBF111DE18BAA00168571 /* ExpertSignDetailResponse.swift in Sources */,
 				ED7E32B51DDC0B66006780B7 /* ExpertSignListResponse.swift in Sources */,
+				EDDAA0F91DE43222005B166A /* ViewUtils.swift in Sources */,
 				EDD06D571DDD8B7D007AC1E8 /* PayResponse.swift in Sources */,
 				EDFCBF201DE2A9D600168571 /* PayMethodViewController.swift in Sources */,
 				ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */,
+				EDDAA0EE1DE3FCEA005B166A /* LoginResponse.swift in Sources */,
 				EDD06D581DDD8B7D007AC1E8 /* PayResult.swift in Sources */,
 				EDFCBF191DE18E6000168571 /* ExpertSignImageCell.swift in Sources */,
 				EDFCBF121DE18BAA00168571 /* ExpertSignDetailResult.swift in Sources */,
@@ -712,11 +768,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ED4E5E091DE45BD8002DE374 /* ArtSignProLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED4E5E081DE45BD8002DE374 /* Base */,
+				ED4E5E0A1DE45BD9002DE374 /* en */,
+				ED4E5E0B1DE45BDA002DE374 /* zh-Hans */,
+			);
+			name = ArtSignProLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ED62F3351DDB21E100AB8BA5 /* Base */,
-				EDD06D491DDD53FF007AC1E8 /* zh-Hans */,
+				ED4E5E0D1DE45C23002DE374 /* en */,
+				ED4E5E0F1DE45C27002DE374 /* zh-Hans */,
 			);
 			name = ArtSignPro.storyboard;
 			path = Resources;

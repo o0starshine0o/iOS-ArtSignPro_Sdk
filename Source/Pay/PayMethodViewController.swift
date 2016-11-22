@@ -9,6 +9,7 @@
 import UIKit
 
 class PayMethodViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var backViewControllerID:String?
     var methods:[PayMethodResult]?
     var selectMethod:PayMethodResult?
     
@@ -51,9 +52,10 @@ class PayMethodViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
-        // 在viewcontroller返回之前记录选中的支付方式
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         selectMethod = methods?[(indexPath as NSIndexPath).row]
-        return indexPath
+        if backViewControllerID != nil{
+            self.performSegue(withIdentifier: backViewControllerID!, sender: self)
+        }
     }
 }
