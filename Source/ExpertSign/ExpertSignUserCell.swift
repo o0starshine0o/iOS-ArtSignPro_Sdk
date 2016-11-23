@@ -40,26 +40,24 @@ class ExpertSignUserCell: UICollectionViewCell {
             let deadlineStamp = TimeInterval((userSign?.deadlineTimeStamp)!)
             let format = DateFormatter()
             format.dateFormat = "deadline_format".localized
-            print("deadline_format".localized)
-//            deadlineView.text = "\(format.string(from: Date(timeIntervalSince1970: deadlineStamp)))前完成"
             deadlineView.text = String(format: "complete before %@".localized, format.string(from: Date(timeIntervalSince1970: deadlineStamp)))
         }
         if (userSign?.imageUrl?.isEmpty)! {
             imitateButton.backgroundColor = UIColor.lightGray
-            imitateButton.setTitle("设计中···", for: UIControlState())
+            imitateButton.setTitle("Designing···".localized, for: UIControlState())
             imitateButton.isEnabled = false
         }else{
             imitateButton.backgroundColor = BaseGreen
-            imitateButton.setTitle("开始临摹", for: UIControlState())
+            imitateButton.setTitle("Imitate".localized, for: UIControlState())
             imitateButton.isEnabled = true
         }
         if (userSign?.videoUrl?.isEmpty)! {
             videoButton.backgroundColor = UIColor.lightGray
-            videoButton.setTitle("设计中···", for: UIControlState())
+            videoButton.setTitle("Designing···".localized, for: UIControlState())
             videoButton.isEnabled = false
         }else{
             videoButton.backgroundColor = BaseBule
-            videoButton.setTitle("观看视频", for: UIControlState())
+            videoButton.setTitle("Watch".localized, for: UIControlState())
             videoButton.isEnabled = true
         }
     }

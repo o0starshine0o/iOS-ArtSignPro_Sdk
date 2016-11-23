@@ -7,4 +7,7 @@
  */
 
 "deadline_format" = "MM-dd HH:mm";
-"complete before %@"="Complete before %@";
+"complete before %@"="%@前完成设计";
+"Designing···" = "设计中···";
+"Imitate" = "开始临摹";
+"Watch" = "观看视频";

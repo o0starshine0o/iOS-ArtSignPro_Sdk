@@ -109,7 +109,6 @@ class ExpertSignDetailViewController: UIViewController, UITableViewDataSource, U
     
     // 下载用户的专家签数据
     func loadData(){
-        print("loadData")
         var params = NetUtils.getBaseParams()
         params["expert_sign_id"] = expertId!
         Alamofire.request(SignDetailUrl, method: .post, parameters: params).responseJSON(completionHandler:expertSignDetailResponseHandler)

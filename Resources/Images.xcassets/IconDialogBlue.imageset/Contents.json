@@ -7,6 +7,11 @@
     },
     {
       "idiom" : "iphone",
+      "subtype" : "retina4",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
       "filename" : "IconDialogBlue@2x~iphone.png",
       "scale" : "2x"
     },
@@ -19,6 +24,11 @@
     {
       "idiom" : "iphone",
       "filename" : "IconDialogBlue@3x~iphone.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "subtype" : "retina4",
       "scale" : "3x"
     }
   ],
