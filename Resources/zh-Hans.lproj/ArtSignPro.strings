@@ -104,8 +104,8 @@
 /* Class = "UIButton"; normalTitle = "Watch"; ObjectID = "tyJ-UJ-YhB"; */
 "tyJ-UJ-YhB.normalTitle" = "Watch";
 
-/* Class = "UILabel"; text = "Type"; ObjectID = "xfE-Su-1RR"; */
-"xfE-Su-1RR.text" = "Type";
+/* Class = "UILabel"; text = "Type:ExpertSign"; ObjectID = "xfE-Su-1RR"; */
+"xfE-Su-1RR.text" = "类型：专家签名";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "yma-cr-mTm"; */
 "yma-cr-mTm.text" = "Title";

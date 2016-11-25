@@ -6,6 +6,7 @@
 //  Copyright © 2016年 qicode. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 public enum EnvironmentType{
@@ -17,18 +18,28 @@ let DefaultImage = UIImage.init(named: "Loading")
 
 var BusinessKey:String = ""
 var BusinessSecret:String = ""
+var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
 
-public func initArtSignPro(key:String, secret:String){
+public func initArtSignPro(key:String, secret:String, scheme:String){
     BusinessKey = key
     BusinessSecret = secret
-    // temp
-//    DataUtils.logout()
-    DataUtils.login(id:"7", name:"胡永胜", phone:"13018019891")
+    BusinessScheme = scheme
 }
 
 public func setEnvironment(environment:EnvironmentType){
     Environment = environment
 }
 
+open class ArtSignProDelegate: UIResponder, UIApplicationDelegate {
+    
+    public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
+        return Pingpp.handleOpen(url, withCompletion: nil)
+    }
+    
+    public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return Pingpp.handleOpen(url as URL!, withCompletion: nil)
+    }
+    
+}

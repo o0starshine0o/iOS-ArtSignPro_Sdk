@@ -46,7 +46,8 @@ let CustomSignUpdateChargeUrl = "\(Url)customized_sign/update_charge_status/"
 let GetChargeUrl = "\(Url)pay/create_charge/"
 let GetChargeIDUrl = "\(Url)pay/create_ios_charge/"
 let CheckReceiptUrl = "\(Url)pay/check_ios_receipt/"
-let PayMethodUrl = "\(Url)pay/get_usable_pay_method/"
+let PayMethodUrl = "\(Url)business/get_pay_method/"
+let GetPriceUrl = "\(Url)pay/get_price/"
 
 class NetUtils{
     

@@ -10,6 +10,8 @@
 		0018F20EF46C99D3C7AF3027 /* Pods_ArtSignProSdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */; };
 		473EB5EFD696A4489A75B2FD /* Pods_ArtSignProSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1617C89FE481F67F9E251C8 /* Pods_ArtSignProSdk.framework */; };
 		ED02862C1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = ED02862B1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h */; };
+		ED2DAC6C1DE5819600D18C00 /* GetPriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DAC6A1DE5819600D18C00 /* GetPriceResponse.swift */; };
+		ED2DAC6D1DE5819600D18C00 /* GetPriceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DAC6B1DE5819600D18C00 /* GetPriceResult.swift */; };
 		ED4E5E071DE45BD8002DE374 /* ArtSignProLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4E5E091DE45BD8002DE374 /* ArtSignProLocalizable.strings */; };
 		ED62F3231DDABABE00AB8BA5 /* ArtSignProSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3221DDABABE00AB8BA5 /* ArtSignProSdk.podspec */; };
 		ED62F3391DDB231000AB8BA5 /* ArtSignPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED62F3321DDB20C200AB8BA5 /* ArtSignPro.storyboard */; };
@@ -97,6 +99,8 @@
 		B870707655320090B9AF2FA7 /* Pods-ArtSignProSdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSignProSdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtSignProSdkTests/Pods-ArtSignProSdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSignProSdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED02862B1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArtSignProSdk-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED2DAC6A1DE5819600D18C00 /* GetPriceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPriceResponse.swift; sourceTree = "<group>"; };
+		ED2DAC6B1DE5819600D18C00 /* GetPriceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPriceResult.swift; sourceTree = "<group>"; };
 		ED4E5E081DE45BD8002DE374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ArtSignProLocalizable.strings; sourceTree = "<group>"; };
 		ED4E5E0A1DE45BD9002DE374 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ArtSignProLocalizable.strings; sourceTree = "<group>"; };
 		ED4E5E0B1DE45BDA002DE374 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ArtSignProLocalizable.strings"; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 		EDD06D521DDD8B7D007AC1E8 /* Pay */ = {
 			isa = PBXGroup;
 			children = (
+				ED2DAC6A1DE5819600D18C00 /* GetPriceResponse.swift */,
+				ED2DAC6B1DE5819600D18C00 /* GetPriceResult.swift */,
 				EDD06D531DDD8B7D007AC1E8 /* PayResponse.swift */,
 				EDD06D541DDD8B7D007AC1E8 /* PayResult.swift */,
 			);
@@ -737,6 +743,7 @@
 				EDFCBF1E1DE2A82900168571 /* ExpertSignPayViewController.swift in Sources */,
 				ED7E32AD1DDC0A8D006780B7 /* PayMethodStatus.swift in Sources */,
 				EDFCBF221DE2AAAA00168571 /* PayMethodCell.swift in Sources */,
+				ED2DAC6D1DE5819600D18C00 /* GetPriceResult.swift in Sources */,
 				EDFCBF051DE02B2600168571 /* ExpertSignExampleCell.swift in Sources */,
 				EDFCBF011DE0060200168571 /* ArtSignPro.swift in Sources */,
 				ED7E32A01DDC05FA006780B7 /* DataUtils.swift in Sources */,
@@ -748,6 +755,7 @@
 				EDFCBF201DE2A9D600168571 /* PayMethodViewController.swift in Sources */,
 				ED7E32B41DDC0B66006780B7 /* ExpertSignListExpertSigns.swift in Sources */,
 				EDDAA0EE1DE3FCEA005B166A /* LoginResponse.swift in Sources */,
+				ED2DAC6C1DE5819600D18C00 /* GetPriceResponse.swift in Sources */,
 				EDD06D581DDD8B7D007AC1E8 /* PayResult.swift in Sources */,
 				EDFCBF191DE18E6000168571 /* ExpertSignImageCell.swift in Sources */,
 				EDFCBF121DE18BAA00168571 /* ExpertSignDetailResult.swift in Sources */,

@@ -29,7 +29,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         // 支付成功跳走
-        onSuccessBackSegueID = "CreateExpertSignBack"
+        successControllerID = "ExpertSignListViewController"
         loadData()
     }
     
@@ -37,12 +37,13 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         switch segue.identifier! {
         case "ShowPayMethod":
+            print("ShowPayMethod")
             let viewController = segue.destination as! PayMethodViewController
             viewController.backViewControllerID = "ExpertSignPayViewController"
             viewController.methods = payMethod?.result
-//        case "ShowLoginView":
-//            let viewController = segue.destination as! LoginViewController
-//            viewController.onSuccessBackSegueID = "ExpertSignPayBack"
+        case "ShowLogin":
+            let viewController = segue.destination as! LoginViewController
+            viewController.backViewControllerID = "PayBaseController"
         default:
             break
         }
@@ -53,7 +54,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
         if segue.source is PayMethodViewController {
             payMethodResult = (segue.source as! PayMethodViewController).selectMethod
             tableView.reloadData()
-            updatePrice()
+            getPrice()
         }
     }
     
@@ -163,7 +164,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
     }
     func onVideoCheck(_ state:M13Checkbox.CheckState){
         withVideo = state == M13Checkbox.CheckState.checked
-        updatePrice()
+        getPrice()
     }
     func onNameChanged(name:String?){
         self.name = name
@@ -182,6 +183,14 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
         Alamofire.request(SignDetailUrl, method: .post, parameters: orderParams).responseJSON(completionHandler: orderInfoResponse)
     }
     
+    func getPrice() {
+        var params = NetUtils.getBaseParams()
+        params["coupon_id"] = ""
+        params["expert_sign_id"] = expertId
+        params["sign_type"] = String(withVideo ? WithVideo : WithoutVideo)
+        Alamofire.request(GetPriceUrl, method: .post, parameters: params).responseJSON(completionHandler: getPriceResponse)
+    }
+    
     // the response of sign detail
     func orderInfoResponse(response: DataResponse<Any>) -> Void {
         switch response.result{
@@ -189,7 +198,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
             expertSignDetailResponse = ExpertSignDetailResponse.init(object: value as AnyObject)
             if expertSignDetailResponse?.status?.code == Success {
                 self.tableView.reloadData()
-                updatePrice()
+                getPrice()
             }else{
                 self.tableView.makeToast((expertSignDetailResponse?.status?.descriptionValue)!)
             }
@@ -206,7 +215,7 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
             if payMethod?.status?.code == Success {
                 payMethodResult = payMethod?.result![0]
                 self.tableView.reloadData()
-                updatePrice()
+                getPrice()
             }else{
                 self.tableView.makeToast((payMethod?.status?.descriptionValue)!)
             }
@@ -215,28 +224,20 @@ class ExpertSignPayViewController: PayBaseController, UITableViewDataSource, UIT
         }
     }
     
-    func updatePrice() {
-        if expertSignDetailResponse != nil {
-            let designPrice = expertSignDetailResponse?.result?.designPrice
-            let videoPrice = expertSignDetailResponse?.result?.videoPrice
-            let iosPrice = expertSignDetailResponse?.result?.iosPrice
-            let preferential = expertSignDetailResponse?.result?.preferential
-            if payMethodResult?.symbol == "iap" {
-                let price = iosPrice!
-                priceView.text = String(format: "￥%.2f", Double(price)/100.0)
+    // the response of get price
+    func getPriceResponse(response: DataResponse<Any>) -> Void {
+        switch response.result {
+        case .success(let value):
+            let response = GetPriceResponse.init(object: value as AnyObject)
+            if response.status?.code == Success {
+                priceView.text = String(format: "￥%.2f", Double((response.result?.price)!)/100.0)
                 benefitView.text = nil
                 benefitViewHeight.constant = 0
-            }else if withVideo{
-                let price = designPrice! + videoPrice! - preferential!
-                priceView.text = String(format: "￥%.2f", Double(price)/100.0)
-                benefitView.text = String(format: "(优惠￥%.2f)", Double(preferential!)/100.0)
-                benefitViewHeight.constant = 14
             }else{
-                let price = designPrice!
-                priceView.text = String(format: "￥%.2f", Double(price)/100.0)
-                benefitView.text = nil
-                benefitViewHeight.constant = 0
+                self.tableView.makeToast((response.status?.descriptionValue)!)
             }
+        case .failure(let error):
+            print(error)
         }
     }
 

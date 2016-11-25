@@ -10,7 +10,7 @@ import UIKit
 
 class PayMethodCell: UITableViewCell {
     
-    @IBOutlet var iconView: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
     func initCell(name:String?){

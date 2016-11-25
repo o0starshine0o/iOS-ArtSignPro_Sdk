@@ -22,7 +22,7 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     fileprivate var chargeProductID:String?
     fileprivate var chargeUpdateProductStatusUrl:String?
     // 支付成功后跳转
-    var onSuccessBackSegueID:String?
+    var successControllerID:String?
     
     override func viewWillAppear(_ animated: Bool){
         // 添加支付状态监听
@@ -35,10 +35,10 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     }
     
     // 返回到本viewController
-    @IBAction func onPayBaseReturn(unwindSegue: UIStoryboardSegue, viewController: UIViewController) {
-        if unwindSegue.identifier != nil {
-            switch unwindSegue.identifier! {
-            case "PayBaseLoginBack":
+    @IBAction func toPayBaseController(segue: UIStoryboardSegue) {
+        if segue.identifier != nil {
+            switch segue.identifier! {
+            case "PayBaseController":
                 NetUtils.refreshBaseParams(params: &chargeParams!)
                 // 从登录界面返回，直接调起支付
                 onPay(chargeSymbol!, params: chargeParams!, url: chargeUrl!, productID: chargeProductID!, updateStatusUrl: chargeUpdateProductStatusUrl!)
@@ -67,16 +67,8 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                 getCharge(params: params, url:url)
             }
         }else{
-            // 根据不同的支付方式走不同的流程
-            if symbol == "iap" {
-                // 走应用内支付
-                getChargeID(params: params, productID: productID, url:url)
-            }else{
-                // 走ping++
-                getCharge(params: params, url:url)
-            }
-//            // 跳转到登录界面
-//            performSegue(withIdentifier: "ShowLoginView", sender: self)
+            // 跳转到登录界面
+            performSegue(withIdentifier: "ShowLogin", sender: self)
         }
     }
     
@@ -228,7 +220,7 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     
     // Step 2 : 等待ping++的结果
     func payByPingPP(charge:Any!){
-        Pingpp.createPayment(charge as! NSObject!, appURLScheme: "ArtSignPro", withCompletion: {result -> Void in
+        Pingpp.createPayment(charge as! NSObject!, appURLScheme: BusinessScheme, withCompletion: {result -> Void in
             if "success".contains(result.0!){
                 self.paySuccess()
             }else{
@@ -241,8 +233,8 @@ class PayBaseController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     func paySuccess() {
         SwiftSpinner.hide()
         view.makeToast("亲，下单成功了^_^\n请耐心等待我们设计师为您设计")
-        if self.onSuccessBackSegueID != nil{
-            self.performSegue(withIdentifier: self.onSuccessBackSegueID!, sender: self)
+        if self.successControllerID != nil{
+            self.performSegue(withIdentifier: self.successControllerID!, sender: self)
         }
     }
     

@@ -15,10 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var verificationCodeView: UITextField!
     @IBOutlet var getAuthCodeButton: UIButton!
     
-    var onSuccessBackSegueID:String?
+    var backViewControllerID:String?
     
     let WaitingTime = 60
-    var toViewController:Int!
     var phoneNum:String!
     var authCode:String!
     var timer:Timer!
@@ -29,8 +28,6 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool){
-        // 显示导航栏
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         // 友盟统计
 //        MobClick.beginLogPageView("登陆")
     }
@@ -51,30 +48,12 @@ class LoginViewController: UIViewController {
             var params = NetUtils.getBaseParams()
             params["user_phone"] = phoneNum
             params["verify_type"] = "1"
-            Alamofire.request(VerifyUrl, method: .post, parameters: params)
-                .responseJSON{response in
-                    switch response.result{
-                    case .success(let value):
-                        let response = Response.init(object: value as AnyObject)
-                        if Int((response.status?.code)!) == 0{
-                            // 请求成功
-                            AlertUtils.showAlert(viewController: self, title: "发送成功", message: "验证码已发送至您的手机：\(self.phoneNum!)")
-                        }else{
-                            // 请求失败
-                            AlertUtils.showAlert(viewController: self, title: "", message: (response.status?.description)!)
-                        }
-                        break
-                    case .failure( _):
-                        AlertUtils.showAlert(viewController: self, title: "发送失败", message: "请确认您的手机：\(self.phoneNum!)是否正确\n检查无误后请点击“获取验证码”")
-                        break
-                    }
-            }
+            Alamofire.request(VerifyUrl, method: .post, parameters: params).responseJSON(completionHandler: getVerificationCodeResponse)
             // 启动倒计时
             coolDownTime = WaitingTime
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(LoginViewController.coolDown), userInfo: nil, repeats: true)
             getAuthCodeButton.isEnabled = false
         }else{
-            // 电话号码不正确
             AlertUtils.showAlert(viewController: self, title: "号码错误", message: "请确认您的手机：\(phoneNum!)是否正确\n检查无误后请点击“获取验证码”")
         }
     }
@@ -85,42 +64,59 @@ class LoginViewController: UIViewController {
             phoneNum = phoneNumView.text
         }
         if !DataUtils.isTelNumber(num: phoneNum){
-            // 电话号码不正确
             AlertUtils.showAlert(viewController: self, title: "号码错误", message: "请确认您的手机：\(phoneNum!)是否正确\n检查无误后请点击“获取验证码”")
             return
         }
         if DataUtils.isAuthCode(num: authCode){
-            // 验证码正确，发起登陆请求
             var params = NetUtils.getBaseParams()
             params["user_phone"] = phoneNum
             params["code"] = authCode
             params["is_rl"] = "1"
-            Alamofire.request(LoginUrl, method: .post, parameters: params).responseJSON{response in
-                    switch response.result{
-                    case .success(let value):
-                        let response = LoginResponse.init(object: value as AnyObject)
-                        if Int((response.status?.code)!)! == 0{
-                            // 请求成功
-                            let id = response.result?.userId
-                            let name = response.result?.userName
-                            let phone = response.result?.userPhone
-                            DataUtils.login(id:String(describing: id!), name:name!, phone:phone!)
-                            if self.onSuccessBackSegueID != nil{
-                                self.performSegue(withIdentifier: self.onSuccessBackSegueID!, sender: self)
-                            }
-                        }else{
-                            // 请求失败
-                            AlertUtils.showAlert(viewController: self, title: "", message: (response.status?.description)!)
-                        }
-                        break
-                    case .failure(let error):
-                        print(error)
-                        break
-                    }
-            }
+            Alamofire.request(LoginUrl, method: .post, parameters: params).responseJSON(completionHandler: loginResponse)
         }else{
-            // 验证码错误
             AlertUtils.showAlert(viewController: self, title: "号码错误", message: "请确认验证码：\(authCode!)，是否正确\n检查无误后请点击“开始签名吧”")
+        }
+    }
+    
+    // the response of login
+    func loginResponse(response: DataResponse<Any>) -> Void {
+        switch response.result{
+        case .success(let value):
+            let response = LoginResponse.init(object: value as AnyObject)
+            if response.status?.code == Success{
+                let id = response.result?.userId
+                let name = response.result?.userName
+                let phone = response.result?.userPhone
+                DataUtils.login(id:String(describing: id!), name:name!, phone:phone!)
+                if self.backViewControllerID != nil{
+                    self.performSegue(withIdentifier: self.backViewControllerID!, sender: self)
+                }
+            }else{
+                AlertUtils.showAlert(viewController: self, title: "", message: (response.status?.description)!)
+            }
+            break
+        case .failure(let error):
+            print(error)
+            break
+        }
+    }
+    
+    // the response of get verification code
+    func getVerificationCodeResponse(response: DataResponse<Any>) -> Void {
+        switch response.result{
+        case .success(let value):
+            let response = Response.init(object: value as AnyObject)
+            if response.status?.code == Success{
+                // 请求成功
+                AlertUtils.showAlert(viewController: self, title: "发送成功", message: "验证码已发送至您的手机：\(self.phoneNum!)")
+            }else{
+                // 请求失败
+                AlertUtils.showAlert(viewController: self, title: "", message: (response.status?.description)!)
+            }
+            break
+        case .failure:
+            AlertUtils.showAlert(viewController: self, title: "发送失败", message: "请确认您的手机：\(self.phoneNum!)是否正确\n检查无误后请点击“获取验证码”")
+            break
         }
     }
     
