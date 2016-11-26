@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AutoLayoutTextViews
 
 public protocol ExpertSignPayExtraDelegate : NSObjectProtocol {
     func onExtraChanged(request:String?)
@@ -14,12 +15,13 @@ public protocol ExpertSignPayExtraDelegate : NSObjectProtocol {
 
 class ExpertSignPayExtraCell: UITableViewCell, UITextViewDelegate {
     
-    @IBOutlet weak var requestView: UITextView!
+    @IBOutlet weak var requestView: ALPlaceholderTextView!
     
     var delegate:ExpertSignPayExtraDelegate?
 
     func initCell(delegate:ExpertSignPayExtraDelegate?) {
         self.delegate = delegate
+        requestView.placeholder = "extra request".localized
     }
     
     func textViewDidChange(_ textView: UITextView){

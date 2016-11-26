@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.1.0)
+  - AutoLayoutTextViews (1.2.5)
   - CryptoSwift (0.6.6)
   - EZSwiftExtensions (1.7)
   - Kingfisher (3.2.1)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AutoLayoutTextViews
   - CryptoSwift
   - EZSwiftExtensions
   - Kingfisher
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  AutoLayoutTextViews: 4f8f7627ba239c0cc39858239ffbb2c2456ef36b
   CryptoSwift: 88592381b73f36e192124539390a7c9bacda76af
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
@@ -31,6 +34,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 500ec29618b410e76e2d6e1b399f846625d0c9fc
+PODFILE CHECKSUM: 2daa165427a45d5d1f739bfdb0b25d65e898ed47
 
 COCOAPODS: 1.2.0.beta.1

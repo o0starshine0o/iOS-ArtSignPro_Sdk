@@ -6,7 +6,7 @@
 "65D-gd-079.text" = "Name";
 
 /* Class = "UITextField"; placeholder = "验证码"; ObjectID = "6re-nR-rt4"; */
-"6re-nR-rt4.placeholder" = "验证码";
+"6re-nR-rt4.placeholder" = "Code";
 
 /* Class = "UIButton"; normalTitle = "Design"; ObjectID = "7Gc-XK-AlK"; */
 "7Gc-XK-AlK.normalTitle" = "Design";
@@ -15,10 +15,10 @@
 "9MP-GX-pSR.text" = "*";
 
 /* Class = "UILabel"; text = "亲，注册后我们将会为您终身保存签名的相关资料"; ObjectID = "9dc-Xp-T01"; */
-"9dc-Xp-T01.text" = "亲，注册后我们将会为您终身保存签名的相关资料";
+"9dc-Xp-T01.text" = "After register,we will save sign for you always";
 
 /* Class = "UIButton"; normalTitle = "开始签名"; ObjectID = "9pP-A7-e6K"; */
-"9pP-A7-e6K.normalTitle" = "开始签名";
+"9pP-A7-e6K.normalTitle" = "Sign Now";
 
 /* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "BW4-PB-72t"; */
 "BW4-PB-72t.normalTitle" = "Pay";
@@ -51,10 +51,10 @@
 "VR9-mW-bHM.text" = "Request";
 
 /* Class = "UITextView"; text = "If you have any extra requests , please tell me."; ObjectID = "Xhb-1n-p8f"; */
-"Xhb-1n-p8f.text" = "If you have any extra requests , please tell me.";
+"Xhb-1n-p8f.text" = "";
 
 /* Class = "UILabel"; text = "Price"; ObjectID = "azA-ww-oAN"; */
-"azA-ww-oAN.text" = "Price";
+"azA-ww-oAN.text" = "$0.00";
 
 /* Class = "UINavigationItem"; title = "Sign List"; ObjectID = "d7P-cn-kAG"; */
 "d7P-cn-kAG.title" = "Sign List";
@@ -66,13 +66,10 @@
 "eVN-AU-qTg.text" = "$0.00";
 
 /* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "eY6-xa-0LE"; */
-"eY6-xa-0LE.normalTitle" = "获取验证码";
+"eY6-xa-0LE.normalTitle" = "Get Code";
 
 /* Class = "UILabel"; text = "$0.00"; ObjectID = "fbQ-7e-YY0"; */
 "fbQ-7e-YY0.text" = "$0.00";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "g1t-fe-Kl9"; */
-"g1t-fe-Kl9.text" = "Label";
 
 /* Class = "UILabel"; text = "Sign"; ObjectID = "gE1-J1-bdw"; */
 "gE1-J1-bdw.text" = "Sign";
@@ -99,7 +96,7 @@
 "pc3-lD-BsX.normalTitle" = "Imitate";
 
 /* Class = "UITextField"; placeholder = "请输入您的手机号"; ObjectID = "sbE-VE-Hf1"; */
-"sbE-VE-Hf1.placeholder" = "请输入您的手机号";
+"sbE-VE-Hf1.placeholder" = "Phone number";
 
 /* Class = "UIButton"; normalTitle = "Watch"; ObjectID = "tyJ-UJ-YhB"; */
 "tyJ-UJ-YhB.normalTitle" = "Watch";

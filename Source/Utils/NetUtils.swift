@@ -56,7 +56,7 @@ class NetUtils{
         let infoDictionary = Bundle.main.infoDictionary
         let majorVersion = infoDictionary!["CFBundleShortVersionString"]
         let appDisplayVersion = majorVersion as! String
-        let version = appDisplayVersion.replacingOccurrences(of: ".", with: "")
+        let version = appDisplayVersion
         let identify = infoDictionary!["CFBundleIdentifier"] as! String
         let iosVersion = UIDevice.current.systemVersion
         let model = UIDevice.deviceModelReadable()
@@ -68,7 +68,8 @@ class NetUtils{
         var params = Dictionary<String, String>()
         params["business_key"] = BusinessKey
         params["platform"] = "iOS"
-        params["app_version"] = version
+        params["app_version"] = version.replacingOccurrences(of: ".", with: "")
+        params["production_version"] = version
         params["phone_model"] = model
         params["phone_version"] = iosVersion
         params["timestamp"] = time

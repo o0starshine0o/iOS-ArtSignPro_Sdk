@@ -1,15 +1,15 @@
 
 /* Class = "UILabel"; text = "Method"; ObjectID = "4bh-4G-Nb0"; */
-"4bh-4G-Nb0.text" = "Method";
+"4bh-4G-Nb0.text" = "支付方式";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "65D-gd-079"; */
-"65D-gd-079.text" = "Name";
+"65D-gd-079.text" = "姓名";
 
 /* Class = "UITextField"; placeholder = "验证码"; ObjectID = "6re-nR-rt4"; */
 "6re-nR-rt4.placeholder" = "验证码";
 
 /* Class = "UIButton"; normalTitle = "Design"; ObjectID = "7Gc-XK-AlK"; */
-"7Gc-XK-AlK.normalTitle" = "Design";
+"7Gc-XK-AlK.normalTitle" = "开始设计";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "9MP-GX-pSR"; */
 "9MP-GX-pSR.text" = "*";
@@ -21,100 +21,97 @@
 "9pP-A7-e6K.normalTitle" = "开始签名";
 
 /* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "BW4-PB-72t"; */
-"BW4-PB-72t.normalTitle" = "Pay";
+"BW4-PB-72t.normalTitle" = "支付";
 
 /* Class = "UILabel"; text = "Draft"; ObjectID = "Cxl-QH-zbo"; */
-"Cxl-QH-zbo.text" = "Draft";
+"Cxl-QH-zbo.text" = "手稿";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "HJi-gc-e7q"; */
-"HJi-gc-e7q.text" = "Time";
+"HJi-gc-e7q.text" = "截止时间";
 
 /* Class = "UILabel"; text = "Deadline"; ObjectID = "IG1-pC-w0c"; */
-"IG1-pC-w0c.text" = "Deadline";
+"IG1-pC-w0c.text" = "截止时间";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "JM0-Fl-Oqa"; */
-"JM0-Fl-Oqa.text" = "Time";
+"JM0-Fl-Oqa.text" = "截止时间";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Nqe-Th-XOU"; */
-"Nqe-Th-XOU.text" = "Label";
+"Nqe-Th-XOU.text" = "价格";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "O9N-p7-tKb"; */
-"O9N-p7-tKb.normalTitle" = "Login";
+"O9N-p7-tKb.normalTitle" = "登录";
 
 /* Class = "UILabel"; text = "Total:"; ObjectID = "Tcs-tE-HkU"; */
-"Tcs-tE-HkU.text" = "Total:";
+"Tcs-tE-HkU.text" = "总价:";
 
 /* Class = "UILabel"; text = "method"; ObjectID = "UdA-kA-rOD"; */
-"UdA-kA-rOD.text" = "method";
+"UdA-kA-rOD.text" = "支付方式";
 
 /* Class = "UILabel"; text = "Request"; ObjectID = "VR9-mW-bHM"; */
-"VR9-mW-bHM.text" = "Request";
+"VR9-mW-bHM.text" = "要求";
 
 /* Class = "UITextView"; text = "If you have any extra requests , please tell me."; ObjectID = "Xhb-1n-p8f"; */
-"Xhb-1n-p8f.text" = "If you have any extra requests , please tell me.";
+"Xhb-1n-p8f.text" = "";
 
 /* Class = "UILabel"; text = "Price"; ObjectID = "azA-ww-oAN"; */
-"azA-ww-oAN.text" = "Price";
+"azA-ww-oAN.text" = "￥0.00";
 
 /* Class = "UINavigationItem"; title = "Sign List"; ObjectID = "d7P-cn-kAG"; */
-"d7P-cn-kAG.title" = "Sign List";
+"d7P-cn-kAG.title" = "签名列表";
 
 /* Class = "UIButton"; normalTitle = "Retry"; ObjectID = "dRA-1O-zW3"; */
-"dRA-1O-zW3.normalTitle" = "Retry";
+"dRA-1O-zW3.normalTitle" = "重试";
 
 /* Class = "UILabel"; text = "$0.00"; ObjectID = "eVN-AU-qTg"; */
-"eVN-AU-qTg.text" = "$0.00";
+"eVN-AU-qTg.text" = "￥0.00";
 
 /* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "eY6-xa-0LE"; */
 "eY6-xa-0LE.normalTitle" = "获取验证码";
 
 /* Class = "UILabel"; text = "$0.00"; ObjectID = "fbQ-7e-YY0"; */
-"fbQ-7e-YY0.text" = "$0.00";
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "g1t-fe-Kl9"; */
-"g1t-fe-Kl9.text" = "Label";
+"fbQ-7e-YY0.text" = "￥0.00";
 
 /* Class = "UILabel"; text = "Sign"; ObjectID = "gE1-J1-bdw"; */
-"gE1-J1-bdw.text" = "Sign";
+"gE1-J1-bdw.text" = "签名";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i3Y-PQ-Gxs"; */
-"i3Y-PQ-Gxs.normalTitle" = "Button";
+"i3Y-PQ-Gxs.normalTitle" = "返回";
 
 /* Class = "UILabel"; text = "(Benefit:0.00)"; ObjectID = "ioy-WA-OtU"; */
-"ioy-WA-OtU.text" = "(Benefit:0.00)";
+"ioy-WA-OtU.text" = "(优惠:0.00)";
 
 /* Class = "UILabel"; text = "------------ Sign List ------------"; ObjectID = "jt3-Sf-3GF"; */
-"jt3-Sf-3GF.text" = "------------ Sign List ------------";
+"jt3-Sf-3GF.text" = "------------ 签名列表 ------------";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "k7L-So-XGP"; */
-"k7L-So-XGP.text" = "Label";
+"k7L-So-XGP.text" = "支付方式";
 
 /* Class = "UILabel"; text = "Video"; ObjectID = "l6B-Ce-jgU"; */
-"l6B-Ce-jgU.text" = "Video";
+"l6B-Ce-jgU.text" = "视频";
 
 /* Class = "UILabel"; text = "SignName"; ObjectID = "lTY-Rm-WhG"; */
-"lTY-Rm-WhG.text" = "SignName";
+"lTY-Rm-WhG.text" = "签名";
 
 /* Class = "UIButton"; normalTitle = "Imitate"; ObjectID = "pc3-lD-BsX"; */
-"pc3-lD-BsX.normalTitle" = "Imitate";
+"pc3-lD-BsX.normalTitle" = "开始临摹";
 
 /* Class = "UITextField"; placeholder = "请输入您的手机号"; ObjectID = "sbE-VE-Hf1"; */
 "sbE-VE-Hf1.placeholder" = "请输入您的手机号";
 
 /* Class = "UIButton"; normalTitle = "Watch"; ObjectID = "tyJ-UJ-YhB"; */
-"tyJ-UJ-YhB.normalTitle" = "Watch";
+"tyJ-UJ-YhB.normalTitle" = "观看视频";
 
 /* Class = "UILabel"; text = "Type:ExpertSign"; ObjectID = "xfE-Su-1RR"; */
 "xfE-Su-1RR.text" = "类型：专家签名";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "yma-cr-mTm"; */
-"yma-cr-mTm.text" = "Title";
+"yma-cr-mTm.text" = "标题";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "yus-Df-eGI"; */
-"yus-Df-eGI.text" = "Name";
+"yus-Df-eGI.text" = "姓名";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "zbP-BC-NMk"; */
-"zbP-BC-NMk.text" = "Description";
+"zbP-BC-NMk.text" = "描述";
 
 /* Class = "UILabel"; text = "Result"; ObjectID = "zfH-WA-RXG"; */
-"zfH-WA-RXG.text" = "Result";
+"zfH-WA-RXG.text" = "结果";

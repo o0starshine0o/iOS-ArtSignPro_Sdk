@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
     spec.name                = 'ArtSignProSdk'
-    spec.version             = '0.0.1'
+    spec.version             = '0.0.2'
     spec.platform            = :ios, '9.0'
     spec.license             = { :type => 'MIT', :file => 'LICENSE.md' }
-    spec.homepage            = 'https://github.com/o0starshine0o/iOS-ArtSignPro_Sdk'
+    spec.homepage            = 'https://github.com/o0starshine0o/iOS-ArtSignProDemo'
     spec.authors             = { 'AbelHu' => 'tohys@qq.com' }
     spec.summary             = 'The core function of ArtSignPro'
     spec.description         = 'The core function of ArtSignPro.With this sdk,you can offer expert sign to your users,at the same time you will share the amount of the charge'
@@ -16,6 +16,8 @@ Pod::Spec.new do |spec|
     spec.dependency            'SwiftSpinner'
     spec.dependency            'Toast-Swift'
     spec.dependency            'M13Checkbox'
+    spec.dependency            'IQKeyboardManager'
+    spec.dependency            'AutoLayoutTextViews'
 
     spec.source              = { :git => 'https://github.com/o0starshine0o/iOS-ArtSignPro_Sdk.git', :tag => "v#{spec.version}" }
     spec.default_subspec     = 'Core', 'Pay', 'Alipay', 'WeChat'

@@ -1,0 +1,6 @@
+framework module AutoLayoutTextViews {
+  umbrella header "AutoLayoutTextViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

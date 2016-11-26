@@ -20,6 +20,8 @@ target "ArtSignProSdk" do
     pod 'Toast-Swift'
     # checkbox
     pod 'M13Checkbox'
+    # TextView 使用 placeHoldeer
+    pod 'AutoLayoutTextViews'
 end
 
 target "ArtSignProSdkTests" do
