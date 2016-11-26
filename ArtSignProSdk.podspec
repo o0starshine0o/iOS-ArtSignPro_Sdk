@@ -23,8 +23,10 @@ Pod::Spec.new do |spec|
     spec.default_subspec     = 'Core', 'Pay', 'Alipay', 'WeChat'
 
     spec.subspec 'Core' do |core|
-        core.source_files='Source/**/*.swift'
+        core.source_files='Source/**/*.swift', 'Headers/*.h'
         core.resource='Resources/**/*.*'
+        core.private_header_files = 'Headers/*.h'
+        core.dependency 'ArtSignProSdk/Pay'
     end
 
     spec.subspec 'Pay' do |pay|
