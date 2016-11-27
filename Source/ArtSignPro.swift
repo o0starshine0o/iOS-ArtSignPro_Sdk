@@ -8,29 +8,23 @@
 
 import UIKit
 import Foundation
+import Alamofire
 
 public enum EnvironmentType{
     case Test
     case Production
 }
 
-let DefaultImage = UIImage.init(named: "Loading")
+public protocol ArtSignProSdkDelegate : NSObjectProtocol {
+    func isShowSdk(show:Bool)
+}
 
+let DefaultImage = UIImage.init(named: "Loading")
 var BusinessKey:String = ""
 var BusinessSecret:String = ""
 var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
-
-public func initArtSignPro(key:String, secret:String, scheme:String){
-    BusinessKey = key
-    BusinessSecret = secret
-    BusinessScheme = scheme
-}
-
-public func setEnvironment(environment:EnvironmentType){
-    Environment = environment
-}
 
 open class ArtSignProDelegate: UIResponder, UIApplicationDelegate {
     
@@ -42,4 +36,30 @@ open class ArtSignProDelegate: UIResponder, UIApplicationDelegate {
         return Pingpp.handleOpen(url as URL!, withCompletion: nil)
     }
     
+}
+
+public func initArtSignPro(key:String, secret:String, scheme:String){
+    BusinessKey = key
+    BusinessSecret = secret
+    BusinessScheme = scheme
+}
+
+public func setEnvironment(environment:EnvironmentType){
+    Environment = environment
+}
+
+public func isShowSdk(delegate:ArtSignProSdkDelegate){
+    Alamofire.request(PayMethodUrl, method: .post, parameters: NetUtils.getBaseParams()).responseJSON{response in
+        switch response.result {
+        case .success(let value):
+            let payMethod = PayMethodResponse.init(object: value as AnyObject)
+            if payMethod.status?.code == Success {
+                delegate.isShowSdk(show: (payMethod.result?.count)! > 0)
+            }else{
+                delegate.isShowSdk(show: false)
+            }
+        case .failure:
+            delegate.isShowSdk(show: false)
+        }
+    }
 }
