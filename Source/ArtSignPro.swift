@@ -26,18 +26,6 @@ var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
 
-open class ArtSignProDelegate: UIResponder, UIApplicationDelegate {
-    
-    public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
-        return Pingpp.handleOpen(url, withCompletion: nil)
-    }
-    
-    public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return Pingpp.handleOpen(url as URL!, withCompletion: nil)
-    }
-    
-}
-
 public func initArtSignPro(key:String, secret:String, scheme:String){
     BusinessKey = key
     BusinessSecret = secret
@@ -46,6 +34,10 @@ public func initArtSignPro(key:String, secret:String, scheme:String){
 
 public func setEnvironment(environment:EnvironmentType){
     Environment = environment
+}
+
+public func handleOpen(url:URL) -> Bool {
+    return Pingpp.handleOpen(url, withCompletion: nil)
 }
 
 public func isShowSdk(delegate:ArtSignProSdkDelegate){

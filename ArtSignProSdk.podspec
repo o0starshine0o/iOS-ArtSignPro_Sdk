@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                = 'ArtSignProSdk'
-    spec.version             = '0.0.3'
+    spec.version             = '0.0.4'
     spec.platform            = :ios, '9.0'
     spec.license             = { :type => 'MIT', :file => 'LICENSE.md' }
     spec.homepage            = 'https://github.com/o0starshine0o/iOS-ArtSignProDemo'
