@@ -99,6 +99,7 @@
 		B870707655320090B9AF2FA7 /* Pods-ArtSignProSdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSignProSdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtSignProSdkTests/Pods-ArtSignProSdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD97E1CCAE0E8BF67EDFD0B6 /* Pods_ArtSignProSdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSignProSdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED02862B1DDEEF46007402E0 /* ArtSignProSdk-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArtSignProSdk-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED14E4191DF514CE0032491E /* ArtSignProTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ArtSignProTest.playground; sourceTree = "<group>"; };
 		ED2DAC6A1DE5819600D18C00 /* GetPriceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPriceResponse.swift; sourceTree = "<group>"; };
 		ED2DAC6B1DE5819600D18C00 /* GetPriceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPriceResult.swift; sourceTree = "<group>"; };
 		ED4E5E081DE45BD8002DE374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ArtSignProLocalizable.strings; sourceTree = "<group>"; };
@@ -301,6 +302,7 @@
 			children = (
 				ED7E32961DDC054A006780B7 /* ArtSignProSdkTests.swift */,
 				ED7E32981DDC054A006780B7 /* Info.plist */,
+				ED14E4191DF514CE0032491E /* ArtSignProTest.playground */,
 			);
 			path = ArtSignProSdkTests;
 			sourceTree = "<group>";

@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func getVerificationCode(_ sender: UIButton) {
-        phoneNum = phoneNumView.text
+        phoneNum = phoneNumView.text?.trimmed()
         if DataUtils.isTelNumber(num: phoneNum){
             // 电话号码正确,获取验证码
             var params = NetUtils.getBaseParams()
@@ -59,15 +59,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        authCode = verificationCodeView.text
+        authCode = verificationCodeView.text?.trimmed()
         if phoneNum == nil {
-            phoneNum = phoneNumView.text
+            phoneNum = phoneNumView.text?.trimmed()
         }
         if !DataUtils.isTelNumber(num: phoneNum){
             AlertUtils.showAlert(viewController: self, title: "号码错误", message: "请确认您的手机：\(phoneNum!)是否正确\n检查无误后请点击“获取验证码”")
-            return
-        }
-        if DataUtils.isAuthCode(num: authCode){
+        }else if DataUtils.isAuthCode(num: authCode){
             var params = NetUtils.getBaseParams()
             params["user_phone"] = phoneNum
             params["code"] = authCode
@@ -107,10 +105,8 @@ class LoginViewController: UIViewController {
         case .success(let value):
             let response = Response.init(object: value as AnyObject)
             if response.status?.code == Success{
-                // 请求成功
                 AlertUtils.showAlert(viewController: self, title: "发送成功", message: "验证码已发送至您的手机：\(self.phoneNum!)")
             }else{
-                // 请求失败
                 AlertUtils.showAlert(viewController: self, title: "", message: (response.status?.description)!)
             }
             break
