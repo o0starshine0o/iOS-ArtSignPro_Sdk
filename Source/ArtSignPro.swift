@@ -10,15 +10,6 @@ import UIKit
 import Foundation
 import Alamofire
 
-public enum EnvironmentType{
-    case Test
-    case Production
-}
-
-public protocol ArtSignProSdkDelegate : NSObjectProtocol {
-    func isShowSdk(show:Bool)
-}
-
 let DefaultImage = UIImage.init(named: "Loading")
 var BusinessKey:String = ""
 var BusinessSecret:String = ""
@@ -26,32 +17,50 @@ var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
 
-public func initArtSignPro(key:String, secret:String, scheme:String){
-    BusinessKey = key
-    BusinessSecret = secret
-    BusinessScheme = scheme
+@objc
+public enum EnvironmentType : Int{
+    case Test
+    case Production
 }
 
-public func setEnvironment(environment:EnvironmentType){
-    Environment = environment
+@objc(ArtSignProSdkDelegate)
+public protocol ArtSignProSdkDelegate : NSObjectProtocol {
+    func isShowSdk(show:Bool)
 }
 
-public func handleOpen(url:URL) -> Bool {
-    return Pingpp.handleOpen(url, withCompletion: nil)
-}
-
-public func isShowSdk(delegate:ArtSignProSdkDelegate){
-    Alamofire.request(PayMethodUrl, method: .post, parameters: NetUtils.getBaseParams()).responseJSON{response in
-        switch response.result {
+@objc(ArtSignPro)
+public class ArtSignPro:NSObject{
+    var delegate:ArtSignProSdkDelegate?
+    public init(key:String, secret:String, scheme:String) {
+        BusinessKey = key
+        BusinessSecret = secret
+        BusinessScheme = scheme
+    }
+    
+    public func setEnvironment(environment:EnvironmentType){
+        Environment = environment
+    }
+    
+    public func isShowSdk(delegate:ArtSignProSdkDelegate){
+        self.delegate = delegate
+        Alamofire.request(PayMethodUrl, method: .post, parameters: NetUtils.getBaseParams()).responseJSON(completionHandler: showSdkResponse)
+    }
+    
+    public func handleOpen(url:URL) -> Bool {
+        return Pingpp.handleOpen(url, withCompletion: nil)
+    }
+    
+    func showSdkResponse(reponse: DataResponse<Any>) -> Void {
+        switch reponse.result {
         case .success(let value):
             let payMethod = PayMethodResponse.init(object: value as AnyObject)
             if payMethod.status?.code == Success {
-                delegate.isShowSdk(show: (payMethod.result?.count)! > 0)
+                delegate?.isShowSdk(show: (payMethod.result?.count)! > 0)
             }else{
-                delegate.isShowSdk(show: false)
+                delegate?.isShowSdk(show: false)
             }
         case .failure:
-            delegate.isShowSdk(show: false)
+            delegate?.isShowSdk(show: false)
         }
     }
 }
