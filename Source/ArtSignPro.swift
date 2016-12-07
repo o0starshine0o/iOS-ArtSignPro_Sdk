@@ -50,16 +50,33 @@ public class ArtSignPro:NSObject{
         return Pingpp.handleOpen(url, withCompletion: nil)
     }
     
+    public func enableLog(enable:Bool) -> Void{
+        EnableLog = enable
+    }
+    
+    public func getVersion() -> String{
+        return getSdkVersion()
+    }
+    
     func showSdkResponse(reponse: DataResponse<Any>) -> Void {
         switch reponse.result {
         case .success(let value):
             let payMethod = PayMethodResponse.init(object: value as AnyObject)
             if payMethod.status?.code == Success {
+                if EnableLog {
+                    print("pay method type count:"+String((payMethod.result?.count)!))
+                }
                 delegate?.isShowSdk(show: (payMethod.result?.count)! > 0)
             }else{
+                if EnableLog {
+                    print((payMethod.status?.extra)!+(payMethod.status?.descriptionValue)!)
+                }
                 delegate?.isShowSdk(show: false)
             }
         case .failure:
+            if EnableLog {
+                print("Network error")
+            }
             delegate?.isShowSdk(show: false)
         }
     }
