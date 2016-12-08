@@ -16,6 +16,7 @@ var BusinessSecret:String = ""
 var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
+var PanWidth:CGFloat = 10
 
 @objc
 public enum EnvironmentType : Int{
@@ -56,6 +57,14 @@ public class ArtSignPro:NSObject{
     
     public func getVersion() -> String{
         return getSdkVersion()
+    }
+    
+    public func setPanWidth(width:CGFloat) -> Void{
+        if width >= 5 && width <= 13{
+            PanWidth = width
+        }else{
+            print("PanWidth between 5 and 13")
+        }
     }
     
     func showSdkResponse(reponse: DataResponse<Any>) -> Void {

@@ -14,7 +14,7 @@ class BrushBoard: UIImageView {
     var points:[CGPoint] = [CGPoint]()
     
     // 当前半径
-    var currentWidth:CGFloat = 10
+    var currentWidth:CGFloat = PanWidth
     
     // 初始图片
     var defaultImage:UIImage?
@@ -48,7 +48,11 @@ class BrushBoard: UIImageView {
     func btnClick() {
         image = defaultImage
         lastImage = defaultImage
-        currentWidth = 13
+        currentWidth = PanWidth
+    }
+    
+    func setPanWidth(width:CGFloat) -> Void {
+        currentWidth = width
     }
     
     /**

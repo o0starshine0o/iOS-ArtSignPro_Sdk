@@ -16,9 +16,11 @@ class ImitateViewController: UIViewController {
     
     var imageUrl:String?
     var backViewControllerID:String?
+    var orientation:Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        orientation = UIDevice.current.value(forKey: "orientation")
         // 强制横屏
         UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
         // 下载图片
@@ -44,8 +46,8 @@ class ImitateViewController: UIViewController {
     }
     
     @IBAction func onExit(_ sender: UIButton) {
-        // 强制竖屏
-        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        // 退回之前的状态
+        UIDevice.current.setValue(orientation, forKey: "orientation")
         if self.backViewControllerID != nil{
             self.performSegue(withIdentifier: self.backViewControllerID!, sender: self)
         }
