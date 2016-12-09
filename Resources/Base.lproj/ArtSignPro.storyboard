@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -370,7 +371,7 @@
                                 <rect key="frame" x="189" y="350" width="37" height="37"/>
                                 <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="146" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-qp-elF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="146" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-qp-elF">
                                 <rect key="frame" x="0.0" y="64" width="414" height="622"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -396,9 +397,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="showImageView" destination="2cN-Dn-CNr" id="Rjk-yo-opl"/>
-                                            <segue destination="EtG-Ni-a8e" kind="show" identifier="ShowVideo" id="jIb-Ip-d73">
-                                                <segue key="commit" inheritsFrom="parent" id="oJQ-VQ-HB6"/>
-                                                <segue key="preview" inheritsFrom="commit" id="sBl-Hw-HPR"/>
+                                            <segue destination="EtG-Ni-a8e" kind="show" identifier="ShowVideo" id="jKh-lr-SDf">
+                                                <segue key="commit" inheritsFrom="parent" id="2j1-5c-xay"/>
+                                                <segue key="preview" inheritsFrom="commit" id="W5L-eN-S9j"/>
                                             </segue>
                                         </connections>
                                     </tableViewCell>
@@ -1273,10 +1274,10 @@
         <image name="ShowVideo" width="660" height="386"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5xC-RS-8qt"/>
         <segue reference="byF-4H-BPn"/>
+        <segue reference="5xC-RS-8qt"/>
+        <segue reference="jKh-lr-SDf"/>
         <segue reference="ulA-af-hjd"/>
-        <segue reference="sBl-Hw-HPR"/>
         <segue reference="GzO-r1-BAV"/>
         <segue reference="TWw-Z7-d86"/>
     </inferredMetricsTieBreakers>
