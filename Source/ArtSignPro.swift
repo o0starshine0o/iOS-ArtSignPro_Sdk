@@ -16,7 +16,10 @@ var BusinessSecret:String = ""
 var BusinessScheme:String = ""
 var Environment:EnvironmentType = .Test
 var EnableLog:Bool = false
-var PanWidth:CGFloat = 10
+
+var StartPanWidth:CGFloat = 10
+var MinPanWidth:CGFloat = 2
+var MaxPanWidth:CGFloat = 13
 
 @objc
 public enum EnvironmentType : Int{
@@ -31,7 +34,12 @@ public protocol ArtSignProSdkDelegate : NSObjectProtocol {
 
 @objc(ArtSignPro)
 public class ArtSignPro:NSObject{
+    
+    public static var MaxPan:CGFloat = 13
+    public static var MinPan:CGFloat = 2
+    
     var delegate:ArtSignProSdkDelegate?
+    
     public init(key:String, secret:String, scheme:String) {
         BusinessKey = key
         BusinessSecret = secret
@@ -59,11 +67,13 @@ public class ArtSignPro:NSObject{
         return getSdkVersion()
     }
     
-    public func setPanWidth(width:CGFloat) -> Void{
-        if width >= 5 && width <= 13{
-            PanWidth = width
+    public func setPanWidth(min:CGFloat, max:CGFloat, start:CGFloat) -> Void{
+        if min <= start && start <= max {
+            MinPanWidth = min
+            MaxPanWidth = max
+            StartPanWidth = start
         }else{
-            print("PanWidth between 5 and 13")
+            print("PanWidth between 2 and 13")
         }
     }
     

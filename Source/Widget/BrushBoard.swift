@@ -14,7 +14,7 @@ class BrushBoard: UIImageView {
     var points:[CGPoint] = [CGPoint]()
     
     // 当前半径
-    var currentWidth:CGFloat = PanWidth
+    var currentWidth:CGFloat = StartPanWidth
     
     // 初始图片
     var defaultImage:UIImage?
@@ -22,8 +22,8 @@ class BrushBoard: UIImageView {
     var lastImage:UIImage?
     
     // 最大和最小宽度
-    let minWidth:CGFloat = 5
-    let maxWidth:CGFloat = 13
+    let minWidth:CGFloat = MinPanWidth
+    let maxWidth:CGFloat = MaxPanWidth
     
     // 设置调试
     let DEBUG = false
@@ -48,7 +48,7 @@ class BrushBoard: UIImageView {
     func btnClick() {
         image = defaultImage
         lastImage = defaultImage
-        currentWidth = PanWidth
+        currentWidth = StartPanWidth
     }
     
     func setPanWidth(width:CGFloat) -> Void {
@@ -87,7 +87,8 @@ class BrushBoard: UIImageView {
         
         // 如果仅仅点击一下
         if len == 0 {
-            let zeroPath = UIBezierPath(arcCenter: points[1], radius: maxWidth/2-2, startAngle: 0, endAngle: CGFloat(M_PI)*2.0, clockwise: true)
+            let zeroPath = UIBezierPath(arcCenter: points[1], radius: currentWidth/2-2, startAngle: 0, endAngle: CGFloat(M_PI)*2.0, clockwise: true)
+            UIColor(white: 0, alpha: (currentWidth-minWidth)/maxWidth*0.6+0.2).setFill()
             UIColor.black.setFill()
             zeroPath.fill()
             
@@ -208,7 +209,7 @@ extension BrushBoard {
         let p = touch!.location(in: self)
         
         points = [p,p,p]
-        currentWidth = 13
+        currentWidth = StartPanWidth
         changeImage()
     }
     
