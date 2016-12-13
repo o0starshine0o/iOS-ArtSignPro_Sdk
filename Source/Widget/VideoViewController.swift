@@ -16,30 +16,25 @@ class VideoViewController: AVPlayerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let player = AVPlayer(url: URL(string:videoUrl!)!)
+        player = AVPlayer(url: URL(string:videoUrl!)!)
         let playerController = AVPlayerViewController()
         
         playerController.player = player
         self.addChildViewController(playerController)
         self.view.addSubview(playerController.view)
         playerController.view.frame = self.view.frame
-        
-        player.play()
     }
     
     override func viewWillAppear(_ animated: Bool){
         // 显示导航栏
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        // 友盟统计
-//        MobClick.beginLogPageView("视频播放")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        // 友盟统计
-//        MobClick.endLogPageView("视频播放")
+    override func viewDidAppear(_ animated: Bool) {
+        player?.play()
     }
     
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        return [UIInterfaceOrientationMask.portrait]
+    override func viewDidDisappear(_ animated: Bool) {
+        player?.pause()
     }
 }
